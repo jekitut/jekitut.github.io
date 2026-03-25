@@ -193,7 +193,7 @@
         });
       });
 
-      function Cek_Status_CCTV(cctv, marker) {
+      function Cek_Status_CCTV(cctv, marker, retry = 0) {
         marker.setIcon(Gambar_Ikon_Loading);
 
         fetch(cctv.url, {
@@ -206,12 +206,18 @@
           if (response.ok) {
             marker.setIcon(Gambar_Ikon_Online);
           } else {
-            marker.setIcon(Gambar_Ikon_Offline);
+            throw new Error();
           }
         })
 
         .catch(() => {
-          marker.setIcon(Gambar_Ikon_Offline);
+          if (retry < 2) {
+            setTimeout(() => {
+              Cek_Status_CCTV(cctv, marker, retry + 1);
+            }, 2000);
+          } else {
+            marker.setIcon(Gambar_Ikon_Offline);
+          }
         });
       }
 
