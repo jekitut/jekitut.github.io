@@ -179,28 +179,23 @@
       function Cek_Status_CCTV(cctv, marker) {
         marker.setIcon(Gambar_Ikon_Loading);
 
-        if (Hls.isSupported()) {
-          var hls = new Hls();
+        fetch(cctv.url, {
+          method: 'GET',
+          headers: { 'Range': 'bytes=0-100' },
+          cache: 'no-store'
+        })
 
-          var timeout = setTimeout(() => {
-            marker.setIcon(Gambar_Ikon_Offline);
-            hls.destroy();
-          }, 5000);
-
-          hls.loadSource(cctv.url);
-
-          hls.on(Hls.Events.MANIFEST_PARSED, function() {
-            clearTimeout(timeout);
+        .then(response => {
+          if (response.ok) {
             marker.setIcon(Gambar_Ikon_Online);
-            hls.destroy();
-          });
-
-          hls.on(Hls.Events.ERROR, function() {
-            clearTimeout(timeout);
+          } else {
             marker.setIcon(Gambar_Ikon_Offline);
-            hls.destroy();
-          });
-        }
+          }
+        })
+
+        .catch(() => {
+          marker.setIcon(Gambar_Ikon_Offline);
+        });
       }
 
       Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
