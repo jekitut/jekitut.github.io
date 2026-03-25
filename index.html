@@ -211,10 +211,10 @@
         })
 
         .catch(() => {
-          if (retry < 2) {
+          if (retry < 3) {
             setTimeout(() => {
               Cek_Status_CCTV(cctv, marker, retry + 1);
-            }, 2000);
+            }, 1000);
           } else {
             marker.setIcon(Gambar_Ikon_Offline);
           }
