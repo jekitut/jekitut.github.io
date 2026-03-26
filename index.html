@@ -127,16 +127,16 @@
 
       var Gambar_Ikon_Loading = L.icon({
         iconUrl: "Ikon_Status_Loading.png",
-        iconSize: [20, 20],
-        iconAnchor: [10, 20],
-        popupAnchor: [0, -20]
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -30]
       });
 
       var Gambar_Ikon_Offline = L.icon({
         iconUrl: "Ikon_Status_Offline.png",
-        iconSize: [20, 20],
-        iconAnchor: [10, 20],
-        popupAnchor: [0, -20]
+        iconSize: [15, 15],
+        iconAnchor: [7.5, 15],
+        popupAnchor: [0, -15]
       });
 
       var Gambar_Ikon_Online = L.icon({
@@ -199,15 +199,11 @@
 
       function Cek_Status_CCTV(cctv, marker, retry = 0) {
         marker.setIcon(Gambar_Ikon_Loading);
+        fetch(cctv.url, { cache: 'no-store' })
+        .then(res => res.text())
 
-        fetch(cctv.url, {
-          method: 'GET',
-          headers: { 'Range': 'bytes=0-100' },
-          cache: 'no-store'
-        })
-
-        .then(response => {
-          if (response.ok) {
+        .then(text => {
+          if (text.includes("#EXTINF")) {
             marker.setIcon(Gambar_Ikon_Online);
           } else {
             throw new Error();
