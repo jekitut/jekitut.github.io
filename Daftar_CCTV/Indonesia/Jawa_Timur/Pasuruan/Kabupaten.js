@@ -1,7 +1,14 @@
 var Kabupaten_Pasuruan = [
+  { kode: "4", nama: "Al Yasini Arah Selatan", lat: -7.694400, lng: 112.823125, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/AL-YASINI.m3u8" },
+  { kode: "4758", nama: "Ranggeh Arah Barat", lat: -7.700050, lng: 112.902050, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/RANGGEH.m3u8" },
+  { kode: "4759", nama: "Ngopak Arah Surabaya", lat: -7.699200, lng: 112.975500, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/NGOPAK.m3u8" },
   { kode: "4760", nama: "Pandaan Arah Selatan", lat: -7.654275, lng: 112.695375, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/P21_KARTINI.m3u8" },
+  { kode: "4761", nama: "Rejoso Arah Probolinggo", lat: -7.683425, lng: 112.957425, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/REJOSO.m3u8" },
   { kode: "4762", nama: "Patung Sapi", lat: -7.644200, lng: 112.689625, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/PATUNGSAPI.m3u8" },
   { kode: "4763", nama: "Taman Dayu Arah Utara", lat: -7.665150, lng: 112.699625, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/TAMANDAYUUTARA.m3u8" },
+  { kode: "4764", nama: "Alun-alun Bangil Arah Probolinggo", lat: -7.598475, lng: 112.783800, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/ALUNALUNBANGIL.m3u8" },
+  { kode: "4765", nama: "Sumur Waru Arah Probolinggo", lat: -7.712500, lng: 113.015000, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/SUMURWARU.m3u8" },
+  { kode: "4769", nama: "Contong Arah Selatan", lat: -7.700225, lng: 112.834825, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/CONTONG.m3u8" },
   { kode: "4770", nama: "Taman Dayu Arah Selatan", lat: -7.665175, lng: 112.699650, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/TAMANDAYU.m3u8" },
   { kode: "4772", nama: "Purwodadi Arah Malang", lat: -7.802030, lng: 112.734200, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/PWD_MLG.m3u8" },
   { kode: "4773", nama: "Purwodadi Arah Surabaya", lat: -7.801950, lng: 112.734250, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/PWD_SBY.m3u8" },
@@ -21,5 +28,5 @@ var Kabupaten_Pasuruan = [
   { kode: "4808", nama: "Nusa Dua Gempol", lat: -7.565100, lng: 112.717100, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/EXIT_TOL_GEMPOL.m3u8" },
   { kode: "4809", nama: "Pasar Wonorejo Arah Selatan", lat: -7.717575, lng: 112.803375, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/PASAR_WONOREJO1.m3u8" },
   { kode: "4810", nama: "Pasar Wonorejo Arah Selatan", lat: -7.718075, lng: 112.802675, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/PASAR_WONOREJO2.m3u8" },
-  { kode: "0", nama: "Gempol Arah Utara", lat: -7.547825, lng: 112.697425, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/SP3_GEMPOL_PORONG.m3u8" }
+  { kode: "", nama: "Gempol Arah Utara", lat: -7.547825, lng: 112.697425, url: "https://dishub.pasuruankab.go.id:5444/LiveApp/streams/SP3_GEMPOL_PORONG.m3u8" }
 ];
