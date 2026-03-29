@@ -1,0 +1,14 @@
+var Kabupaten_Bojonegoro = [
+  { kode: "SIMPANG 4 BUNDARAN JETAK", nama: "Air Mancur Jetak Arah Utara", lat: -7.163200, lng: 111.869750, url: "https://data.bojonegorokab.go.id/live/public/af39d772-e7e0-493c-aba1-4460d473bfa8.m3u8" },
+  { kode: "SIMPANG 4 RAJEKWESI - SOSRODILOGO", nama: "Rajekwesi Arah Barat", lat: -7.155700, lng: 111.872350, url: "https://data.bojonegorokab.go.id/live/public/05dfbeca-138c-4e12-a89a-c7b4f08375e7.m3u8" },
+  { kode: "SIMPANG 4 U.SUROPATI - PANGLIMA POLIM", nama: "Suropati Arah Selatan", lat: -7.158525, lng: 111.879300, url: "https://data.bojonegorokab.go.id/live/public/b707920d-4922-40cd-aa3a-40335f4d1139.m3u8" },
+  { kode: "SIMPANG 3 BUNDARAN ADIPURA", nama: "Tugu Adipura Bojonegoro", lat: -7.159675, lng: 111.881775, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 KREMPYENG - GAJAH MADA", nama: "Krempyeng Arah Surabaya", lat: -7.161950, lng: 111.884075, url: "https://data.bojonegorokab.go.id/live/public/fd9a18d4-a5f9-4046-b60c-065512722ee9.m3u8" },
+  { kode: "SIMPANG 3 JAMBEAN - BASUKI RAHMAT", nama: "Jambean Arah Utara", lat: -7.166550, lng: 111.889825, url: "https://data.bojonegorokab.go.id/live/public/7535db5e-d96f-4fc9-ae7d-ff1dc41f79ce.m3u8" },
+  { kode: "SIMPANG 3 AHMAD YANI - VETERAN", nama: "Ahmad Yani Arah Utara", lat: -7.1704525, lng: 111.894700, url: "https://data.bojonegorokab.go.id/live/public/121464f4-cfbc-4bbf-bd2e-247de018f401.m3u8" },
+  { kode: "SIMPANG 4 ALUN ALUN - SATLANTAS", nama: "Alun-alun", lat: -7.148300, lng: 111.879300, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 DIPONEGORO", nama: "Diponegoro", lat: -7.152250, lng: 111.882550, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 PLN - SAWUNGGALING", nama: "PLN Arah Selatan", lat: -7.152575, lng: 111.891575, url: "https://data.bojonegorokab.go.id/live/public/94774749-ebac-4563-b91e-cd24249f15ba.m3u8" },
+  { kode: "SIMPANG 4 MLATEN", nama: "Mlaten Arah Timur", lat: -7.153650, lng: 111.900775, url: "https://data.bojonegorokab.go.id/live/public/285b6a91-2eb3-4d8b-aee8-4f4d459302df.m3u8" },
+  { kode: "SIMPANG 3 CAMPUREJO - LETTU SUYITNO", nama: "Campurejo", lat: -7.142050, lng: 111.901900, url: "https://data.bojonegorokab.go.id/live/public/9f01c568-f320-489f-8422-23003b18b678.m3u8" }
+];

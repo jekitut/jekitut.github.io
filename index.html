@@ -104,11 +104,13 @@
     </div>
 
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Batu/Kota.js"></script>
+    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.js"></script>
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Kediri/Kota.js"></script>
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.js"></script>
 
     <script>
       var Daftar_CCTV = [
+        ...Kabupaten_Bojonegoro,
         ...Kabupaten_Pasuruan,
         ...Kota_Batu,
         ...Kota_Kediri
@@ -209,26 +211,67 @@
 
       function Cek_Status_CCTV(cctv, marker, retry = 0) {
         marker.setIcon(Gambar_Ikon_Loading);
-        fetch(cctv.url, { cache: 'no-store' })
-          .then(res => res.text())
 
-          .then(text => {
-            if (text.includes("#EXTINF")) {
+        if (cctv.tipe === "hls") {
+          if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(cctv.url);
+
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
               marker.setIcon(Gambar_Ikon_Online);
-            } else {
-              throw new Error();
-            }
-          })
+              hls.destroy();
+            });
 
-          .catch(() => {
-            if (retry < 3) {
-              setTimeout(() => {
-                Cek_Status_CCTV(cctv, marker, retry + 1);
-              }, 1000);
-            } else {
-              marker.setIcon(Gambar_Ikon_Offline);
-            }
-          });
+            hls.on(Hls.Events.ERROR, function(event, data) {
+              hls.destroy();
+
+              if (retry < 3) {
+                setTimeout(() => {
+                  Cek_Status_CCTV(cctv, marker, retry + 1);
+                }, 1000);
+              } else {
+                marker.setIcon(Gambar_Ikon_Offline);
+              }
+            });
+          } else {
+            var video = document.createElement("video");
+            video.src = cctv.url;
+
+            video.onloadedmetadata = function() {
+              marker.setIcon(Gambar_Ikon_Online);
+            };
+
+            video.onerror = function() {
+              if (retry < 3) {
+                setTimeout(() => {
+                  Cek_Status_CCTV(cctv, marker, retry + 1);
+                }, 1000);
+              } else {
+                marker.setIcon(Gambar_Ikon_Offline);
+              }
+            };
+          }
+        } else {
+          fetch(cctv.url, { method: "HEAD", cache: "no-store" })
+
+            .then(res => {
+              if (res.ok) {
+                marker.setIcon(Gambar_Ikon_Online);
+              } else {
+                throw new Error();
+              }
+            })
+
+            .catch(() => {
+              if (retry < 3) {
+                setTimeout(() => {
+                  Cek_Status_CCTV(cctv, marker, retry + 1);
+                }, 1000);
+              } else {
+                marker.setIcon(Gambar_Ikon_Offline);
+              }
+            });
+        }
       }
 
       Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
