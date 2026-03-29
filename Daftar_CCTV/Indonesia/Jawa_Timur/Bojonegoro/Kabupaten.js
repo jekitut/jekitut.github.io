@@ -10,5 +10,14 @@ var Kabupaten_Bojonegoro = [
   { kode: "SIMPANG 4 DIPONEGORO", nama: "Diponegoro", lat: -7.152250, lng: 111.882550, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
   { kode: "SIMPANG 4 PLN - SAWUNGGALING", nama: "PLN Arah Selatan", lat: -7.152575, lng: 111.891575, url: "https://data.bojonegorokab.go.id/live/public/94774749-ebac-4563-b91e-cd24249f15ba.m3u8" },
   { kode: "SIMPANG 4 MLATEN", nama: "Mlaten Arah Timur", lat: -7.153650, lng: 111.900775, url: "https://data.bojonegorokab.go.id/live/public/285b6a91-2eb3-4d8b-aee8-4f4d459302df.m3u8" },
-  { kode: "SIMPANG 3 CAMPUREJO - LETTU SUYITNO", nama: "Campurejo", lat: -7.142050, lng: 111.901900, url: "https://data.bojonegorokab.go.id/live/public/9f01c568-f320-489f-8422-23003b18b678.m3u8" }
+  { kode: "SIMPANG 3 CAMPUREJO - LETTU SUYITNO", nama: "Campurejo Arah Timur", lat: -7.142050, lng: 111.901900, url: "https://data.bojonegorokab.go.id/live/public/9f01c568-f320-489f-8422-23003b18b678.m3u8" },
+  { kode: "SIMPANG 4 PROLIMAN KAPAS", nama: "Proliman", lat: -7.197600, lng: 111.928850, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 BALEN", nama: "Balen", lat: -7.193125, lng: 111.959100, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 SUMBEREJO", nama: "Sumberrejo", lat: -7.177150, lng: 112.000450, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 CLANGAP", nama: "Clangap", lat: -7.137050, lng: 111.725850, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
+  { kode: "SIMPANG 4 BASUKI RAHMAT - DR.CIPTO", nama: "Basuki Rahmat Arah Selatan", lat: -7.157374, lng: 111.891500, url: "https://data.bojonegorokab.go.id/live/public/4d630ff3-a34a-45bc-b265-d63b004cd2c0.m3u8" },
+  { kode: "DEPAN UJI KENDARAAN BERMOTOR", nama: "UPTD PKB Arah Surabaya", lat: -7.179450, lng: 111.906200, url: "https://data.bojonegorokab.go.id/live/public/0682655b-c640-40a5-a611-fe3a6b905502.m3u8" },
+  { kode: "SIMPANG 4 DR.CIPTO - DR.SUHARSO", nama: "Dr. Cipto Arah Barat", lat: -7.157300, lng: 111.888850, url: "https://data.bojonegorokab.go.id/live/public/e48d590c-9788-45d1-b3e2-32243074e6a8.m3u8" },
+  { kode: "SIMPANG 4 TEUKU UMAR", nama: "Teuku Umar Arah Utara dan Barat", lat: -7.152675, lng: 111.889800, url: "https://data.bojonegorokab.go.id/live/public/744634a6-f7ac-41b0-8334-7a8bd49aec65.m3u8" },
+  { kode: "SIMPANG 4 PADANGAN", nama: "Padangan", lat: -7.156700, lng: 111.616050, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" }
 ];
