@@ -1,23 +1,27 @@
 var Kabupaten_Bojonegoro = [
-  { kode: "SIMPANG 4 BUNDARAN JETAK", nama: "Air Mancur Jetak Arah Utara", lat: -7.163200, lng: 111.869750, url: "https://data.bojonegorokab.go.id/live/public/af39d772-e7e0-493c-aba1-4460d473bfa8.m3u8" },
-  { kode: "SIMPANG 4 RAJEKWESI - SOSRODILOGO", nama: "Rajekwesi Arah Barat", lat: -7.155700, lng: 111.872350, url: "https://data.bojonegorokab.go.id/live/public/05dfbeca-138c-4e12-a89a-c7b4f08375e7.m3u8" },
-  { kode: "SIMPANG 4 U.SUROPATI - PANGLIMA POLIM", nama: "Suropati Arah Selatan", lat: -7.158525, lng: 111.879300, url: "https://data.bojonegorokab.go.id/live/public/b707920d-4922-40cd-aa3a-40335f4d1139.m3u8" },
-  { kode: "SIMPANG 3 BUNDARAN ADIPURA", nama: "Tugu Adipura Bojonegoro", lat: -7.159675, lng: 111.881775, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 KREMPYENG - GAJAH MADA", nama: "Krempyeng Arah Surabaya", lat: -7.161950, lng: 111.884075, url: "https://data.bojonegorokab.go.id/live/public/fd9a18d4-a5f9-4046-b60c-065512722ee9.m3u8" },
-  { kode: "SIMPANG 3 JAMBEAN - BASUKI RAHMAT", nama: "Jambean Arah Utara", lat: -7.166550, lng: 111.889825, url: "https://data.bojonegorokab.go.id/live/public/7535db5e-d96f-4fc9-ae7d-ff1dc41f79ce.m3u8" },
-  { kode: "SIMPANG 3 AHMAD YANI - VETERAN", nama: "Ahmad Yani Arah Utara", lat: -7.1704525, lng: 111.894700, url: "https://data.bojonegorokab.go.id/live/public/121464f4-cfbc-4bbf-bd2e-247de018f401.m3u8" },
-  { kode: "SIMPANG 4 ALUN ALUN - SATLANTAS", nama: "Alun-alun", lat: -7.148300, lng: 111.879300, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 DIPONEGORO", nama: "Diponegoro", lat: -7.152250, lng: 111.882550, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 PLN - SAWUNGGALING", nama: "PLN Arah Selatan", lat: -7.152575, lng: 111.891575, url: "https://data.bojonegorokab.go.id/live/public/94774749-ebac-4563-b91e-cd24249f15ba.m3u8" },
-  { kode: "SIMPANG 4 MLATEN", nama: "Mlaten Arah Timur", lat: -7.153650, lng: 111.900775, url: "https://data.bojonegorokab.go.id/live/public/285b6a91-2eb3-4d8b-aee8-4f4d459302df.m3u8" },
-  { kode: "SIMPANG 3 CAMPUREJO - LETTU SUYITNO", nama: "Campurejo Arah Timur", lat: -7.142050, lng: 111.901900, url: "https://data.bojonegorokab.go.id/live/public/9f01c568-f320-489f-8422-23003b18b678.m3u8" },
-  { kode: "SIMPANG 4 PROLIMAN KAPAS", nama: "Proliman", lat: -7.197600, lng: 111.928850, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 BALEN", nama: "Balen", lat: -7.193125, lng: 111.959100, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 SUMBEREJO", nama: "Sumberrejo", lat: -7.177150, lng: 112.000450, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 CLANGAP", nama: "Clangap", lat: -7.137050, lng: 111.725850, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" },
-  { kode: "SIMPANG 4 BASUKI RAHMAT - DR.CIPTO", nama: "Basuki Rahmat Arah Selatan", lat: -7.157374, lng: 111.891500, url: "https://data.bojonegorokab.go.id/live/public/4d630ff3-a34a-45bc-b265-d63b004cd2c0.m3u8" },
-  { kode: "DEPAN UJI KENDARAAN BERMOTOR", nama: "UPTD PKB Arah Surabaya", lat: -7.179450, lng: 111.906200, url: "https://data.bojonegorokab.go.id/live/public/0682655b-c640-40a5-a611-fe3a6b905502.m3u8" },
-  { kode: "SIMPANG 4 DR.CIPTO - DR.SUHARSO", nama: "Dr. Cipto Arah Barat", lat: -7.157300, lng: 111.888850, url: "https://data.bojonegorokab.go.id/live/public/e48d590c-9788-45d1-b3e2-32243074e6a8.m3u8" },
-  { kode: "SIMPANG 4 TEUKU UMAR", nama: "Teuku Umar Arah Utara dan Barat", lat: -7.152675, lng: 111.889800, url: "https://data.bojonegorokab.go.id/live/public/744634a6-f7ac-41b0-8334-7a8bd49aec65.m3u8" },
-  { kode: "SIMPANG 4 PADANGAN", nama: "Padangan", lat: -7.156700, lng: 111.616050, url: "https://data.bojonegorokab.go.id/live/public/.m3u8" }
+  { kode: "SIMPANG 4 BUNDARAN JETAK", nama: "Air Mancur Jetak Arah Utara", lat: -7.163200, lng: 111.869750, url_path: "af39d772-e7e0-493c-aba1-4460d473bfa8" },
+  { kode: "SIMPANG 4 RAJEKWESI - SOSRODILOGO", nama: "Rajekwesi Arah Barat", lat: -7.155700, lng: 111.872350, url_path: "05dfbeca-138c-4e12-a89a-c7b4f08375e7" },
+  { kode: "SIMPANG 4 U.SUROPATI - PANGLIMA POLIM", nama: "Suropati Arah Selatan", lat: -7.158525, lng: 111.879300, url_path: "b707920d-4922-40cd-aa3a-40335f4d1139" },
+  { kode: "SIMPANG 3 BUNDARAN ADIPURA", nama: "Tugu Adipura Bojonegoro", lat: -7.159675, lng: 111.881775, url_path: "" },
+  { kode: "SIMPANG 4 KREMPYENG - GAJAH MADA", nama: "Krempyeng Arah Surabaya", lat: -7.161950, lng: 111.884075, url_path: "fd9a18d4-a5f9-4046-b60c-065512722ee9" },
+  { kode: "SIMPANG 3 JAMBEAN - BASUKI RAHMAT", nama: "Jambean Arah Utara", lat: -7.166550, lng: 111.889825, url_path: "7535db5e-d96f-4fc9-ae7d-ff1dc41f79ce" },
+  { kode: "SIMPANG 3 AHMAD YANI - VETERAN", nama: "Ahmad Yani Arah Utara", lat: -7.1704525, lng: 111.894700, url_path: "121464f4-cfbc-4bbf-bd2e-247de018f401" },
+  { kode: "SIMPANG 4 ALUN ALUN - SATLANTAS", nama: "Alun-alun", lat: -7.148300, lng: 111.879300, url_path: "" },
+  { kode: "SIMPANG 4 DIPONEGORO", nama: "Diponegoro", lat: -7.152250, lng: 111.882550, url_path: "" },
+  { kode: "SIMPANG 4 PLN - SAWUNGGALING", nama: "PLN Arah Selatan", lat: -7.152575, lng: 111.891575, url_path: "94774749-ebac-4563-b91e-cd24249f15ba" },
+  { kode: "SIMPANG 4 MLATEN", nama: "Mlaten Arah Timur", lat: -7.153650, lng: 111.900775, url_path: "285b6a91-2eb3-4d8b-aee8-4f4d459302df" },
+  { kode: "SIMPANG 3 CAMPUREJO - LETTU SUYITNO", nama: "Campurejo Arah Timur", lat: -7.142050, lng: 111.901900, url_path: "9f01c568-f320-489f-8422-23003b18b678" },
+  { kode: "SIMPANG 4 PROLIMAN KAPAS", nama: "Proliman", lat: -7.197600, lng: 111.928850, url_path: "" },
+  { kode: "SIMPANG 4 BALEN", nama: "Balen", lat: -7.193125, lng: 111.959100, url_path: "" },
+  { kode: "SIMPANG 4 SUMBEREJO", nama: "Sumberrejo", lat: -7.177150, lng: 112.000450, url_path: "" },
+  { kode: "SIMPANG 4 CLANGAP", nama: "Clangap", lat: -7.137050, lng: 111.725850, url_path: "" },
+  { kode: "SIMPANG 4 BASUKI RAHMAT - DR.CIPTO", nama: "Basuki Rahmat Arah Selatan", lat: -7.157374, lng: 111.891500, url_path: "4d630ff3-a34a-45bc-b265-d63b004cd2c0" },
+  { kode: "DEPAN UJI KENDARAAN BERMOTOR", nama: "UPTD PKB Arah Surabaya", lat: -7.179450, lng: 111.906200, url_path: "0682655b-c640-40a5-a611-fe3a6b905502" },
+  { kode: "SIMPANG 4 DR.CIPTO - DR.SUHARSO", nama: "Dr. Cipto Arah Barat", lat: -7.157300, lng: 111.888850, url_path: "e48d590c-9788-45d1-b3e2-32243074e6a8" },
+  { kode: "SIMPANG 4 TEUKU UMAR", nama: "Teuku Umar Arah Utara dan Barat", lat: -7.152675, lng: 111.889800, url_path: "744634a6-f7ac-41b0-8334-7a8bd49aec65" },
+  { kode: "SIMPANG 4 PADANGAN", nama: "Padangan", lat: -7.156700, lng: 111.616050, url_path: "" }
 ];
+
+Kabupaten_Bojonegoro.forEach(item => {
+  item.url = `https://data.bojonegorokab.go.id/live/public/${item.url_path}.m3u8`;
+});
