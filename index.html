@@ -10,7 +10,7 @@
       body { margin:0; font-family: Arial; }
       #map { height: 100vh; }
 
-	  .leaflet-control-layers { display: none !important; }
+      .leaflet-control-layers { display: none !important; }
       .leaflet-control-zoom { display: none !important; }
 
       .leaflet-popup-content {
@@ -73,20 +73,20 @@
       video {
         width: 100%;
         height: auto;
-		object-fit: contain;
+        object-fit: contain;
       }
 
       video:fullscreen {
         width: 100vw;
         height: 100vh;
-		object-fit: contain;
+        object-fit: contain;
         background: black;
       }
 
       video:-webkit-full-screen {
         width: 100vw;
         height: 100vh;
-		object-fit: contain;
+        object-fit: contain;
         background: black;
       }
     </style>
@@ -110,6 +110,7 @@
 
     <script>
       var Daftar_CCTV = [
+        { nama: "Kota Bondowoso", lat: -7.7909025, lng: 112.730651, url: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=23&user=view&pass=K0minfo" },
         ...Kabupaten_Bojonegoro,
         ...Kabupaten_Pasuruan,
         ...Kota_Batu,
