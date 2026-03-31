@@ -58,16 +58,39 @@
         transform: scale(1.1);
       }
 
+      .Container_Tombol_Buka_Embed {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Tombol_Buka_Embed {
+        border-radius: 100px;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        color: black !important;
+        background: lime;
+        transition: all 0.5s ease;
+      }
+
+      .Tombol_Buka_Embed:hover {
+        transform: scale(1.25);
+        background: #00cc00;
+      }
+
       .PopUp_Video {
         width: 350px;
         background: transparent;
       }
 
       .PopUp_Judul {
-        background: lime;
-        color: black;
-        font-size: 12px;
         padding: 4px;
+        font-size: 12px;
+        color: black;
+        background: lime;
       }
 
       video {
@@ -110,7 +133,7 @@
 
     <script>
       var Daftar_CCTV = [
-        { nama: "Kota Bondowoso", lat: -7.7909025, lng: 112.730651, url: "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=23&user=view&pass=K0minfo" },
+        { nama: "Kota Pasuruan", lat: -7.7909025, lng: 112.730651, url: "https://cam.pasuruankota.go.id/bts-tembokrejo" },
         ...Kabupaten_Bojonegoro,
         ...Kabupaten_Pasuruan,
         ...Kota_Batu,
@@ -126,6 +149,7 @@
       var map = L.map('map').setView([-7.7909025, 112.730651], 10);
       var Peta_Aktif = Google_Satelit;
       var Semua_Lokasi_CCTV = [];
+      var Semua_HLS = {};
 
       var Gambar_Ikon_Loading = L.icon({
         iconUrl: "Gambar/Ikon_Status_Loading.png",
@@ -186,26 +210,46 @@
               <video id="${Video_Id}" controls autoplay></video>
             </div>
           `, { maxWidth: 350 });
+        } else {
+          marker.bindPopup(`
+            <div class="PopUp_Video">
+              <div class="PopUp_Judul"><b>${cctv.nama}</b></div>
+              <div class="Container_Tombol_Buka_Embed">
+                <a href="${cctv.url}" target="_blank" class="Tombol_Buka_Embed">▶️ Buka Video</a>
+              </div>
+            </div>
+          `, { maxWidth: 350 });
         }
 
-        marker.on('click', function() {
+        marker.on('popupopen', function() {
           if (cctv.tipe === "hls") {
-            setTimeout(function() {
-              if (cctv.tipe === "hls") {
-                var video = document.getElementById(Video_Id);
-                
-                if (Hls.isSupported()) {
-                  var hls = new Hls();
-                  hls.loadSource(cctv.url);
-                  hls.attachMedia(video);
-                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                  video.src = cctv.url;
-                }
-              }
-            }, 500);
-          } else {
-            window.open(cctv.url, '_blank');
-            return;
+            var video = document.getElementById(Video_Id);
+
+            if (Hls.isSupported()) {
+              var hls = new Hls();
+              Semua_HLS[Video_Id] = hls
+              hls.loadSource(cctv.url);
+              hls.attachMedia(video);
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+              video.src = cctv.url;
+            }
+          }
+        });
+
+        marker.on('popupclose', function() {
+          if (cctv.tipe === "hls") {
+            var video = document.getElementById(Video_Id);
+
+            if (video) {
+              video.pause();
+              video.removeAttribute("src");
+              video.load();
+            }
+
+            if (Semua_HLS[Video_Id]) {
+              Semua_HLS[Video_Id].destroy();
+              delete Semua_HLS[Video_Id];
+            }
           }
         });
       });
@@ -232,6 +276,7 @@
                 }, 1000);
               } else {
                 marker.setIcon(Gambar_Ikon_Offline);
+                hls.destroy();
               }
             });
           } else {
