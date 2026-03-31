@@ -66,8 +66,8 @@
       }
 
       .Tombol_Buka_Embed {
-        border-radius: 100px;
         padding: 10px 15px;
+        border-radius: 100px;
         text-decoration: none;
         display: inline-block;
         font-weight: bold;
@@ -133,9 +133,9 @@
 
     <script>
       var Daftar_CCTV = [
-        { nama: "Kota Pasuruan", lat: -7.7909025, lng: 112.730651, url: "https://cam.pasuruankota.go.id/bts-tembokrejo" },
         ...Kabupaten_Bojonegoro,
         ...Kabupaten_Pasuruan,
+        ...Kota_Pasuruan,
         ...Kota_Batu,
         ...Kota_Kediri
       ];
@@ -298,25 +298,7 @@
             };
           }
         } else {
-          fetch(cctv.url, { method: "HEAD", cache: "no-store" })
-
-            .then(res => {
-              if (res.ok) {
-                marker.setIcon(Gambar_Ikon_Online);
-              } else {
-                throw new Error();
-              }
-            })
-
-            .catch(() => {
-              if (retry < 3) {
-                setTimeout(() => {
-                  Cek_Status_CCTV(cctv, marker, retry + 1);
-                }, 1000);
-              } else {
-                marker.setIcon(Gambar_Ikon_Offline);
-              }
-            });
+          marker.setIcon(Gambar_Ikon_Online);
         }
       }
 

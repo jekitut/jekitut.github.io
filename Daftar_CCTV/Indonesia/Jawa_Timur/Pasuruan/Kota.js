@@ -1,3 +1,7 @@
 var Kota_Pasuruan = [
-  { kode: "1", nama: "Kota", lat: -7.7909025, lng: 112.730651, url: "https://cam.pasuruankota.go.id/sm-apotek-3" }
+  { kode: "Batas Selatan Kota 2", nama: "Tembokrejo", lat: -7.679150, lng: 112.899200, url_path: "bts-tembokrejo" }
 ];
+
+Kota_Pasuruan.forEach(item => {
+  item.url = `https://cam.pasuruankota.go.id/${item.url_path}`;
+});
