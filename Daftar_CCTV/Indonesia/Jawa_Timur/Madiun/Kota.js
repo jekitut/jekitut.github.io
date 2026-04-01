@@ -1,4 +1,8 @@
 var Kota_Madiun = [
+  { kode: "60 - Simpang 4 Fatur - Jln. Letkol Suwarno", nama: "Jl. Sumber Karya Arah Utara", lat: -7.640925, lng: 111.536685, url_path: "fatur1" },
+  { kode: "61 - Simpang 4 Fatur - Jln. Taman Praja", nama: "Jl. Sumber Karya Arah Selatan", lat: -7.640950, lng: 111.536675, url_path: "fatur2" },
+  { kode: "62 - Simpang 4 Fatur - Jln. Sumber Karya", nama: "Jl. Sumber Karya Arah Barat", lat: -7.641065, lng: 111.536700, url_path: "fatur3" },
+  { kode: "63 - Simpang 4 Fatur - Jln. Kelapa Manis", nama: "Jl. Sumber Karya Arah Timur", lat: -7.641075, lng: 111.536725, url_path: "fatur4" },
   { kode: "64 - Simpang 4 501 - Jln. Sido Makmur", nama: "Jl. Sido Makmur Arah Utara", lat: -7.626900, lng: 111.503490, url_path: "501A1" },
   { kode: "65 - Simpang 4 501 - Jln. Tirta Raya", nama: "Jl. Tirta Raya Arah Selatan", lat: -7.626950, lng: 111.503500, url_path: "501A2" },
   { kode: "66 - Simpang 4 501- Jln. Urip Sumoharjo ( 501 )", nama: "Jl. Urip Sumoharjo Arah Barat", lat: -7.626950, lng: 111.503400, url_path: "501A3" },
@@ -9,7 +13,10 @@ var Kota_Madiun = [
   { kode: "80 - Simpang 4 Agus Salim - Jln. Merpati", nama: "Jl. H. Agus Salim Arah Barat", lat: -7.634525, lng: 111.517050, url_path: "agussalim4" },
   { kode: "81 - Simpang 3 Bali - Jln. Kenari", nama: "Jl. Bali Arah Selatan", lat: -7.631275, lng: 111.524775, url_path: "bali1" },
   { kode: "82 - Simpang 3 Bali - Jln. Panglima Sudirman - Jln. Mastrip", nama: "Jl. Bali Arah Timur", lat: -7.631450, lng: 111.524950, url_path: "bali2" },
-  { kode: "83 - Simpang 3 Bali - Jln. Bali", nama: "Jl. Bali Arah Utara", lat: -7.631225, lng: 111.524825, url_path: "bali3" }
+  { kode: "83 - Simpang 3 Bali - Jln. Bali", nama: "Jl. Bali Arah Utara", lat: -7.631225, lng: 111.524825, url_path: "bali3" },
+  { kode: "135 - Simpang 4 Cokroaminoto - Jln. Sawo Barat", nama: "Jl. Cokroaminoto Arah Timur", lat: -7.634650, lng: 111.519675, url_path: "cokro1" },
+  { kode: "136 - Simpang 4 Jln. Cokroaminoto Arah Selatan", nama: "Jl. Cokroaminoto Arah Selatan", lat: -7.634475, lng: 111.519600, url_path: "cokro2" },
+  { kode: "161 - Cokro Aminoto Arah Utara", nama: "Jl. Cokroaminoto Arah Utara", lat: -7.634425, lng: 111.519600, url_path: "cokro3" }
 ];
 
 Kota_Madiun.forEach(item => {
