@@ -1,4 +1,11 @@
 var Kota_Madiun = [
+  { kode: "5 - Simpang 4 Rejoagung - Jln. Ring Road Utara", nama: "Tugu UKS Kota Madiun Arah Barat", lat: -7.601725, lng: 111.534225, url_path: "rejoagung1" },
+  { kode: "6 - Simpang 4 Rejoagung - Jln. Yos Sudarso", nama: "Tugu UKS Kota Madiun Arah Selatan", lat: -7.601675, lng: 111.534250, url_path: "rejoagung2" },
+  { kode: "7 - Simpang 4 Rejoagung - Jln. Raya Madiun - Caruban", nama: "Tugu UKS Kota Madiun Arah Utara", lat: -7.601625, lng: 111.534275, url_path: "rejoagung3" },
+  { kode: "8 - Simpang 4 Tean - Jln. Raya Madiun-Ponorogo", nama: "Tugu Lampu Te'an Arah Selatan", lat: -7.657950, lng: 111.526885, url_path: "tean1" },
+  { kode: "9 - Simpang 4 Tean - Jln. D.I Panjaitan", nama: "Tugu Lampu Te'an Arah Utara", lat: -7.657850, lng: 111.526850, url_path: "tean2" },
+  { kode: "10 - Simpang 4 Tean - Jln. Kapten Tendean", nama: "Tugu Lampu Te'an Arah Timur", lat: -7.657900, lng: 111.526865, url_path: "tean3" },
+
   { kode: "49 - Simpang 5 Tugu Pendekar - Jln. Diponegoro Barat", nama: "Proliman Joyo Arah Barat", lat: -7.624250, lng: 111.533325, url_path: "proliman1" },
   { kode: "50 - Simpang 5 Tugu Pendekar - Jln. Diponegoro Timur", nama: "Proliman Joyo Arah Timur", lat: -7.624260, lng: 111.533375, url_path: "proliman2" },
   { kode: "51 - Simpang 5 Tugu Pendekar - Jln. S. Parman", nama: "Proliman Joyo Arah Utara", lat: -7.624425, lng: 111.532945, url_path: "proliman3" },
