@@ -1,4 +1,8 @@
 var Kota_Madiun = [
+  { kode: "49 - Simpang 5 Tugu Pendekar - Jln. Diponegoro Barat", nama: "Proliman Joyo Arah Barat", lat: -7.624250, lng: 111.533325, url_path: "proliman1" },
+  { kode: "50 - Simpang 5 Tugu Pendekar - Jln. Diponegoro Timur", nama: "Proliman Joyo Arah Timur", lat: -7.624260, lng: 111.533375, url_path: "proliman2" },
+  { kode: "51 - Simpang 5 Tugu Pendekar - Jln. S. Parman", nama: "Proliman Joyo Arah Utara", lat: -7.624425, lng: 111.532945, url_path: "proliman3" },
+  { kode: "52 - Simpang 5 Tugu Pendekar - Jln. Thamrin", nama: "Proliman Joyo Arah Selatan", lat: -7.624475, lng: 111.532935, url_path: "proliman4" },
   { kode: "60 - Simpang 4 Fatur - Jln. Letkol Suwarno", nama: "Jl. Sumber Karya Arah Utara", lat: -7.640925, lng: 111.536685, url_path: "fatur1" },
   { kode: "61 - Simpang 4 Fatur - Jln. Taman Praja", nama: "Jl. Sumber Karya Arah Selatan", lat: -7.640950, lng: 111.536675, url_path: "fatur2" },
   { kode: "62 - Simpang 4 Fatur - Jln. Sumber Karya", nama: "Jl. Sumber Karya Arah Barat", lat: -7.641065, lng: 111.536700, url_path: "fatur3" },
@@ -28,7 +32,25 @@ var Kota_Madiun = [
   { kode: "117 - Simpang 4 Pahlawan - Jln. A. Yani", nama: "Jl. Pahlawan Arah Barat", lat: -7.623675, lng: 111.520175, url_path: "pahlawan1" },
   { kode: "118 - Simpang 4 Pahlawan - Jln. pahlawan utara", nama: "Jl. Pahlawan Arah Utara", lat: -7.623375, lng: 111.520425, url_path: "pahlawan2" },
   { kode: "119 - Simpang 4 Pahlawan - Jln. Pahlawan (PSC)", nama: "Jl. Pahlawan Arah Selatan", lat: -7.623425, lng: 111.520425, url_path: "pahlawan3" },
-  { kode: "120 - Simpang 4 Pahlawan - Jln. jawa", nama: "Jl. Pahlawan Arah Timur", lat: -7.623575, lng: 111.520125, url_path: "pahlawan4" }
+  { kode: "120 - Simpang 4 Pahlawan - Jln. jawa", nama: "Jl. Pahlawan Arah Timur", lat: -7.623575, lng: 111.520125, url_path: "pahlawan4" },
+  { kode: "121 - Simpang 3 Pule - Jln. Dr. Soetomo", nama: "BCA KCU Madiun Arah Utara", lat: -7.631160, lng: 111.523150, url_path: "pule1" },
+  { kode: "122 - Simpang 3 Pule - Jln. Panglima Sudirman", nama: "BCA KCU Madiun Arah Timur", lat: -7.631170, lng: 111.523200, url_path: "pule2" },
+  { kode: "123 - simpang 3 Pule - Jln. Panglima Sudirman (Arah Pasar Besar)", nama: "BCA KCU Madiun Arah Barat", lat: -7.631150, lng: 111.523100, url_path: "pule3" },
+  { kode: "124 - Simpang 3 Joyo - Jln. Slamet Riyadi", nama: "Joyo Arah Selatan", lat: -7.624825, lng: 111.536225, url_path: "joyo1" },
+  { kode: "125 - Simpang 3 Joyo - Jln. Imam Bonjol", nama: "Joyo Arah Timur", lat: -7.624725, lng: 111.536300, url_path: "joyo2" },
+  { kode: "126 - Simpang 3 Joyo - Jln. Diponegoro", nama: "Joyo Arah Barat", lat: -7.624750, lng: 111.536200, url_path: "joyo3" },
+  { kode: "129 - Simpang 3 Hayam Wuruk - Jln. Hayam Wuruk", nama: "Jl. Hayam Wuruk Arah Selatan", lat: -7.628500, lng: 111.509650, url_path: "hayamwuruk1" },
+  { kode: "130 - Simpang 3 Hayam Wuruk - Jln. Urip Sumoharjo ( Timur )", nama: "Jl. Hayam Wuruk Arah Timur", lat: -7.628510, lng: 111.509700, url_path: "hayamwuruk2" },
+  { kode: "131 - Simpang 3 Hayam Wuruk - Jln. Urip Sumoharjo ( Barat )", nama: "Jl. Hayam Wuruk Arah Barat", lat: -7.628490, lng: 111.509600, url_path: "hayamwuruk3" },
+  { kode: "132 - Simpang 4 Asahan - Jln. Kapuas", nama: "Jl. Asahan Arah Barat", lat: -7.641275, lng: 111.523175, url_path: "salak1" },
+  { kode: "133 - Simpang 4 Asahan - Jln. Asahan ( Selatan )", nama: "Jl. Asahan Arah Selatan", lat: -7.640975, lng: 111.523350, url_path: "salak2" },
+  { kode: "134 - Simpang 4 Asahan- Jln. Asahan  ( Utara )", nama: "Jl. Asahan Arah Utara", lat: -7.640950, lng: 111.523350, url_path: "salak3" },
+  { kode: "137 - Simpang 3 Prambanan - Jln. Yos Sudarso Arah Selatan", nama: "Jl. Prambanan Arah Selatan", lat: -7.616575, lng: 111.523910, url_path: "prambanan1" },
+  { kode: "138 - Simpang 3 Prambanan - Jln. Yos Sudarso Arah Utara", nama: "Jl. Prambanan Arah Utara", lat: -7.616550, lng: 111.523925, url_path: "prambanan2" },
+  { kode: "139 - Simpang 3 Prambanan - Jln. Prambanan", nama: "Jl. Prambanan Arah Barat", lat: -7.616550, lng: 111.523725, url_path: "prambanan3" },
+  { kode: "140 - Simpang 4 Ring Road - Jln. Keningar", nama: "SMA Negeri 3 Arah Timur", lat: -7.606875, lng: 111.513950, url_path: "ringroad1" },
+  { kode: "141 - Simpang 4 Ring Road - Jln. Wahyu Hidayat III", nama: "SMA Negeri 3 Arah Barat", lat: -7.606800, lng: 111.513975, url_path: "ringroad2" },
+  { kode: "142 - Simpang 4 Ring Road Arah Selatan", nama: "SMA Negeri 3 Arah Selatan", lat: -7.606900, lng: 111.513925, url_path: "ringroad3" }
 ];
 
 Kota_Madiun.forEach(item => {
