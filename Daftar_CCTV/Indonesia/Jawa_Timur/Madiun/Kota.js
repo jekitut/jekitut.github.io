@@ -14,9 +14,21 @@ var Kota_Madiun = [
   { kode: "81 - Simpang 3 Bali - Jln. Kenari", nama: "Jl. Bali Arah Selatan", lat: -7.631275, lng: 111.524775, url_path: "bali1" },
   { kode: "82 - Simpang 3 Bali - Jln. Panglima Sudirman - Jln. Mastrip", nama: "Jl. Bali Arah Timur", lat: -7.631450, lng: 111.524950, url_path: "bali2" },
   { kode: "83 - Simpang 3 Bali - Jln. Bali", nama: "Jl. Bali Arah Utara", lat: -7.631225, lng: 111.524825, url_path: "bali3" },
+  { kode: "88 - Simpang 4 Puspowarno - Jln. Raya Sidomulyo", nama: "Soganten Arah Utara", lat: -7.602125, lng: 111.523825, url_path: "puspowarno1" },
+  { kode: "89 - Simpang 4 Puspowarno - Jln. Puspowarno", nama: "Soganten Arah Selatan", lat: -7.602125, lng: 111.523740, url_path: "puspowarno2" },
+  { kode: "90 - Simpang 4 Puspowarno - Jln. Ring Road Utara", nama: "Soganten Arah Timur", lat: -7.602100, lng: 111.523750, url_path: "puspowarno3" },
+  { kode: "91 - Simpang 4 Puspowarno - Jln. Ring Road Barat", nama: "Soganten Arah Barat", lat: -7.602100, lng: 111.523875, url_path: "puspowarno4" },
   { kode: "135 - Simpang 4 Cokroaminoto - Jln. Sawo Barat", nama: "Jl. Cokroaminoto Arah Timur", lat: -7.634650, lng: 111.519675, url_path: "cokro1" },
   { kode: "136 - Simpang 4 Jln. Cokroaminoto Arah Selatan", nama: "Jl. Cokroaminoto Arah Selatan", lat: -7.634475, lng: 111.519600, url_path: "cokro2" },
-  { kode: "161 - Cokro Aminoto Arah Utara", nama: "Jl. Cokroaminoto Arah Utara", lat: -7.634425, lng: 111.519600, url_path: "cokro3" }
+  { kode: "161 - Cokro Aminoto Arah Utara", nama: "Jl. Cokroaminoto Arah Utara", lat: -7.634425, lng: 111.519600, url_path: "cokro3" },
+  { kode: "113 - Simpang 4 Sriti - Jln. Kolonel Marhadi", nama: "Taman Bantaran Arah Timur", lat: -7.629650, lng: 111.513750, url_path: "sriti1" },
+  { kode: "114 - Simpang 4 Sriti - Jln. Urip Sumoharjo", nama: "Taman Bantaran Arah Barat", lat: -7.629475, lng: 111.513750, url_path: "sriti2" },
+  { kode: "115 - Simpang 4 Sriti - Jln. A. Yani", nama: "Taman Bantaran Arah Utara", lat: -7.629375, lng: 111.513780, url_path: "sriti3" },
+  { kode: "116 - Simpang 4 Sriti - Jln. Meyjen Sungkono", nama: "Taman Bantaran Arah Selatan", lat: -7.629425, lng: 111.513765, url_path: "sriti4" },
+  { kode: "117 - Simpang 4 Pahlawan - Jln. A. Yani", nama: "Jl. Pahlawan Arah Barat", lat: -7.623675, lng: 111.520175, url_path: "pahlawan1" },
+  { kode: "118 - Simpang 4 Pahlawan - Jln. pahlawan utara", nama: "Jl. Pahlawan Arah Utara", lat: -7.623375, lng: 111.520425, url_path: "pahlawan2" },
+  { kode: "119 - Simpang 4 Pahlawan - Jln. Pahlawan (PSC)", nama: "Jl. Pahlawan Arah Selatan", lat: -7.623425, lng: 111.520425, url_path: "pahlawan3" },
+  { kode: "120 - Simpang 4 Pahlawan - Jln. jawa", nama: "Jl. Pahlawan Arah Timur", lat: -7.623575, lng: 111.520125, url_path: "pahlawan4" }
 ];
 
 Kota_Madiun.forEach(item => {
