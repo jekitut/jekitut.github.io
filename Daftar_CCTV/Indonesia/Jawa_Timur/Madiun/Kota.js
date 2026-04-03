@@ -33,6 +33,9 @@ var Kota_Madiun = [
   { kode: "65 - Simpang 4 501 - Jln. Tirta Raya", nama: "Jl. Tirta Raya Arah Selatan", lat: -7.626950, lng: 111.503500, url_path: "501A2" },
   { kode: "66 - Simpang 4 501- Jln. Urip Sumoharjo ( 501 )", nama: "Jl. Urip Sumoharjo Arah Barat", lat: -7.626950, lng: 111.503400, url_path: "501A3" },
   { kode: "67 - Simpang 4 501 - Jln. Urip Sumoharjo Dari Arah Timur", nama: "Jl. Urip Sumoharjo Arah Timur", lat: -7.626900, lng: 111.503250, url_path: "501A4" },
+  { kode: "68 - Simpang 4 Gajah - Jln. Ciliwung", nama: "Patung Gadjah Arah Jl. Ciliwung", lat: -7.651415, lng: 111.520985, url_path: "gajah1" },
+  { kode: "69 - Simpang 4 Gajah - Jln. Soekarno Hatta", nama: "Patung Gadjah Arah Utara", lat: -7.651900, lng: 111.521300, url_path: "gajah2" },
+  { kode: "71 - Simpang 4 Gajah - Arah Dari Te'an", nama: "Patung Gadjah Arah Selatan", lat: -7.651975, lng: 111.521375, url_path: "gajah4" },
   { kode: "72 - Simpang 3 Gading - Jln. Urip Sumoharjo", nama: "Jl. Gading Arah Timur", lat: -7.626300, lng: 111.500250, url_path: "gading1" },
   { kode: "73 - Simpang 4 Sleko - Jln. Trunojoyo", nama: "Tugu Lampu Sleko Arah Selatan", lat: -7.639700, lng: 111.517525, url_path: "seleko1" },
   { kode: "74 - Simpang 4 Sleko - Jln. Agus Salim", nama: "Tugu Lampu Sleko Arah Utara", lat: -7.639700, lng: 111.517675, url_path: "seleko2" },
@@ -44,10 +47,10 @@ var Kota_Madiun = [
   { kode: "81 - Simpang 3 Bali - Jln. Kenari", nama: "Jl. Bali Arah Selatan", lat: -7.631275, lng: 111.524775, url_path: "bali1" },
   { kode: "82 - Simpang 3 Bali - Jln. Panglima Sudirman - Jln. Mastrip", nama: "Jl. Bali Arah Timur", lat: -7.631450, lng: 111.524950, url_path: "bali2" },
   { kode: "83 - Simpang 3 Bali - Jln. Bali", nama: "Jl. Bali Arah Utara", lat: -7.631225, lng: 111.524825, url_path: "bali3" },
-  { kode: "84 - Simpang 4 Pandan - Jln. Pandan", nama: "Jl. Pandan Arah Utara", lat: -7.628250, lng: 111.517675, url_path: "pandan1" },
-  { kode: "85 - Simpang 4 Pandan - Jln. Semeru", nama: "Jl. Pandan Arah Timur", lat: -7.628375, lng: 111.517825, url_path: "pandan2" },
-  { kode: "86 - Simpang 4 Pandan - Alun - Alun Selatan", nama: "Jl. Pandan Arah Selatan", lat: -7.628300, lng: 111.517625, url_path: "pandan3" },
-  { kode: "87 - Simpang 4 Pandan - Alun - Alun Barat", nama: "Jl. Pandan Arah Barat", lat: -7.628375, lng: 111.517775, url_path: "pandan4" },
+  { kode: "84 - Simpang 4 Pandan - Jln. Pandan", nama: "Gedung Bioskop Arjuno Arah Utara", lat: -7.628250, lng: 111.517675, url_path: "pandan1" },
+  { kode: "85 - Simpang 4 Pandan - Jln. Semeru", nama: "Gedung Bioskop Arjuno Arah Timur", lat: -7.628375, lng: 111.517825, url_path: "pandan2" },
+  { kode: "86 - Simpang 4 Pandan - Alun - Alun Selatan", nama: "Gedung Bioskop Arjuno Arah Selatan", lat: -7.628300, lng: 111.517625, url_path: "pandan3" },
+  { kode: "87 - Simpang 4 Pandan - Alun - Alun Barat", nama: "Gedung Bioskop Arjuno Arah Barat", lat: -7.628375, lng: 111.517775, url_path: "pandan4" },
   { kode: "88 - Simpang 4 Puspowarno - Jln. Raya Sidomulyo", nama: "Soganten Arah Utara", lat: -7.602125, lng: 111.523825, url_path: "puspowarno1" },
   { kode: "89 - Simpang 4 Puspowarno - Jln. Puspowarno", nama: "Soganten Arah Selatan", lat: -7.602125, lng: 111.523740, url_path: "puspowarno2" },
   { kode: "90 - Simpang 4 Puspowarno - Jln. Ring Road Utara", nama: "Soganten Arah Timur", lat: -7.602100, lng: 111.523750, url_path: "puspowarno3" },
@@ -55,9 +58,6 @@ var Kota_Madiun = [
   { kode: "92 - Simpang 3 Merak - Jln. Soekarno Hatta", nama: "Jl. Merak Arah Utara", lat: -7.647875, lng: 111.518475, url_path: "merak1" },
   { kode: "93 - Simpang 3 Merak - Jln. Merak", nama: "Jl. Merak Arah Barat", lat: -7.648200, lng: 111.518450, url_path: "merak2" },
   { kode: "94 - Simpang 3 Merak - Jln. Trunojoyo", nama: "Jl. Merak Arah Selatan", lat: -7.647925, lng: 111.518500, url_path: "merak3" },
-
-
-
   { kode: "113 - Simpang 4 Sriti - Jln. Kolonel Marhadi", nama: "Taman Bantaran Arah Timur", lat: -7.629650, lng: 111.513750, url_path: "sriti1" },
   { kode: "114 - Simpang 4 Sriti - Jln. Urip Sumoharjo", nama: "Taman Bantaran Arah Barat", lat: -7.629475, lng: 111.513750, url_path: "sriti2" },
   { kode: "115 - Simpang 4 Sriti - Jln. A. Yani", nama: "Taman Bantaran Arah Utara", lat: -7.629375, lng: 111.513780, url_path: "sriti3" },
@@ -87,7 +87,12 @@ var Kota_Madiun = [
   { kode: "140 - Simpang 4 Ring Road - Jln. Keningar", nama: "SMA Negeri 3 Arah Timur", lat: -7.606875, lng: 111.513950, url_path: "ringroad1" },
   { kode: "141 - Simpang 4 Ring Road - Jln. Wahyu Hidayat III", nama: "SMA Negeri 3 Arah Barat", lat: -7.606800, lng: 111.513975, url_path: "ringroad2" },
   { kode: "142 - Simpang 4 Ring Road Arah Selatan", nama: "SMA Negeri 3 Arah Selatan", lat: -7.606900, lng: 111.513925, url_path: "ringroad3" },
-  { kode: "161 - Cokro Aminoto Arah Utara", nama: "Jl. Cokroaminoto Arah Utara", lat: -7.634425, lng: 111.519600, url_path: "cokro3" }
+  { kode: "156 - Simpang 4 IKIP - Jln. Setia Budi ( Arah Barat )", nama: "Masjid al Mujahidin Lanud Iswahjudi Arah Barat", lat: -7.633965, lng: 111.540800, url_path: "ikip1" },
+  { kode: "157 - Simpang 4 IKIP - Jln. Auri", nama: "Masjid al Mujahidin Lanud Iswahjudi Arah Utara", lat: -7.633950, lng: 111.541050, url_path: "ikip2" },
+  { kode: "158 - Simpang 4 IKIP - Jln. Letkol Suwarno", nama: "Masjid al Mujahidin Lanud Iswahjudi Arah Selatan", lat: -7.634150, lng: 111.540875, url_path: "ikip3" },
+  { kode: "159 - Simpang 4 IKIP - Jln. Setia Budi ( Arah Timur )", nama: "Masjid al Mujahidin Lanud Iswahjudi Arah Timur", lat: -7.633975, lng: 111.540850, url_path: "ikip4" },
+  { kode: "161 - Cokro Aminoto Arah Utara", nama: "Jl. Cokroaminoto Arah Utara", lat: -7.634425, lng: 111.519600, url_path: "cokro3" },
+  { kode: "162 - Simpang 4 Gajah - Jln. Kalimosodo", nama: "Patung Gadjah Arah Jl. Kalimosodo", lat: -7.651975, lng: 111.521125, url_path: "gajah3" }
 ];
 
 Kota_Madiun.forEach(item => {
