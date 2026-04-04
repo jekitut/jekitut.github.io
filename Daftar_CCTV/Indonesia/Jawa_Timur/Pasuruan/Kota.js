@@ -5,7 +5,12 @@ var Kota_Pasuruan = [
   { kode: "45 - Taman Kota (04) Area Dalam (Tengah)", nama: "Taman Kota 04", lat: -7.645350, lng: 112.909450, url_path: "tm-kota-4" },
   { kode: "167 - Batas Selatan Kota 2 Arah Selatan", nama: "Tembokrejo Arah Selatan", lat: -7.679200, lng: 112.899200, url_path: "bts-tembokrejo" },
   { kode: "169 - Simpang Kebonagung Arah Selatan", nama: "Kebonagung Arah Selatan", lat: -7.662500, lng: 112.893150, url_path: "sm-kebonagung-2" },
-  { kode: "170 - Simpang Kebonagung Arah Barat", nama: "Kebonagung Arah Barat", lat: -7.662325, lng: 112.893075, url_path: "sm-kebonagung-3" }
+  { kode: "170 - Simpang Kebonagung Arah Barat", nama: "Kebonagung Arah Barat", lat: -7.662325, lng: 112.893075, url_path: "sm-kebonagung-3" },
+  { kode: "173 - Simpang Bugul Kidul DOOM", nama: "Bugul Kidul PTZ", lat: -7.647610, lng: 112.917675, url_path: "sm-bugul-1" },
+  { kode: "174 - Simpang Bugul Kidul Arah Selatan", nama: "Bugul Kidul Arah Selatan", lat: -7.647625, lng: 112.917500, url_path: "sm-bugul-2" },
+  { kode: "175 - Simpang Bugul Kidul Arah Barat", nama: "Bugul Kidul Arah Barat", lat: -7.647400, lng: 112.917650, url_path: "sm-bugul-3" },
+  { kode: "176 - Simpang Bugul Kidul Arah Timur", nama: "Bugul Kidul Arah Timur", lat: -7.647650, lng: 112.917725, url_path: "sm-bugul-4" },
+  { kode: "177 - Simpang Bugul Kidul Arah Utara", nama: "Bugul Kidul Arah Utara", lat: -7.647450, lng: 112.917700, url_path: "sm-bugul-5" }
 ];
 
 Kota_Pasuruan.forEach(item => {
