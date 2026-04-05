@@ -133,6 +133,7 @@
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.js"></script>
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Kediri/Kota.js"></script>
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Madiun/Kota.js"></script>
+    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Magetan/Kabupaten.js"></script>
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.js"></script>
     <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Pasuruan/Kota.js"></script>
 
@@ -140,6 +141,7 @@
       var Daftar_CCTV = [
         ...Kabupaten_Bojonegoro,
         ...Kabupaten_Bondowoso,
+        ...Kabupaten_Magetan,
         ...Kabupaten_Pasuruan,
         ...Kota_Batu,
         ...Kota_Kediri,
@@ -153,7 +155,7 @@
       var Esri_Nama = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
       var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 20 });
 
-      var map = L.map('map').setView([-7.7909025, 112.730651], 10);
+      var map = L.map('map').setView([-7.790950, 112.730800], 10);
       var Peta_Aktif = Google_Satelit;
       var Semua_Lokasi_CCTV = [];
       var Semua_HLS = {};
