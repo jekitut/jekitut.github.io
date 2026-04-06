@@ -311,11 +311,13 @@
         }
       }
 
-      Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
-
-      setInterval(function() {
+      map.whenReady(function() {
         Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
-      }, (60000 * 5));
+
+        setInterval(function() {
+          Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
+        }, (60000 * 10));
+      });
     </script>
   </body>
 </html>
