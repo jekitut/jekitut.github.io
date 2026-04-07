@@ -371,12 +371,13 @@
       });
 
       map.on('click', function(e) {
-        var diDalam = false
+        var diDalam = false;
 
         Semua_Wilayah_GeoJSON.forEach(layer => {
           if (leafletPip.pointInLayer([e.lanlng.lng, e.lanlng.lat], layer).lenght > 0) {
             diDalam = true;
           }
+        });
 
         if (!diDalam) {
           Semua_Lokasi_CCTV.forEach(item => item.marker.closePopup());
