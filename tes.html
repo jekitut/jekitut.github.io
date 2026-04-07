@@ -158,6 +158,7 @@
       var Semua_HLS = {};
       var Layer_Wilayah = {};
       var Semua_Lokasi_CCTV = [];
+      var Marker_CCTV_Aktif = [];
       var Semua_Wilayah_Polygon = [];
       var Peta_Aktif = Google_Satelit;
       var map = L.map('map').setView([-7.790950, 112.730800], 10);
@@ -324,12 +325,16 @@
       }
 
       function Tampilkan_Wilayah(nama) {
-        Object.values(Layer_Wilayah).forEach(layer => {
-          map.removeLayer(layer);
-        });
+        Marker_CCTV_Aktif.forEach(marker => map.removeLayer(marker));
+        Marker_CCTV_Aktif = [];
+        Object.values(Layer_Wilayah).forEach(layer => map.removeLayer(layer));
 
         if (Layer_Wilayah[nama]) {
           Layer_Wilayah[nama].addTo(map);
+
+          Layer_Wilayah[nama].eachLayer(marker => {
+            Marker_CCTV_Aktif.push(marker);
+          }
         }
       }
 
