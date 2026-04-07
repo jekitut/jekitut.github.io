@@ -159,7 +159,7 @@
       var Layer_Wilayah = {};
       var Semua_Lokasi_CCTV = [];
       var Marker_CCTV_Aktif = [];
-      var Semua_Wilayah_Polygon = [];
+      var Semua_Wilayah_GeoJSON = [];
       var Peta_Aktif = Google_Satelit;
       var map = L.map('map').setView([-7.790950, 112.730800], 10);
       var Google_Satelit = L.tileLayer('https://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { subdomains:['mt0','mt1','mt2','mt3'], maxZoom: 20 });
@@ -345,7 +345,7 @@
         fetch(path)
           .then(response => response.json())
           .then(data => {
-            L.geoJSON(data, {
+            var geoLayer = L.geoJSON(data, {
               style: {
                 color: "#3388ff",
                 weight: 2,
@@ -353,8 +353,6 @@
               },
 
               onEachFeature: function(feature, layer) {
-                Semua_Wilayah_Polygon.push(layer);
-
                 layer.on('click', function() {
                   var nama = feature.properties.nm_dati2;
                   Tampilkan_Wilayah(nama);
@@ -369,14 +367,16 @@
                 });
               }
             }).addTo(map);
-          })
+
+            Semua_Wilayah_GeoJSON.push(geoLayer);
+          }
       });
 
       map.on('click', function(e) {
         var diDalam = false;
 
-        Semua_Wilayah_Polygon.forEach(layer => {
-          if (leafletPip.pointInLayer([e.latlng.lng, e.latlng.lat], layer).length > 0) {
+        Semua_Wilayah_GeoJSON.forEach(geoLayer => {
+          if (leafletPip.pointInLayer([e.latlng.lng, e.latlng.lat], geoLayer).length > 0) {
             diDalam = true;
           }
         });
