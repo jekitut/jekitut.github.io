@@ -333,7 +333,10 @@
           Layer_Wilayah[nama].addTo(map);
 
           Layer_Wilayah[nama].eachLayer(marker => {
+            marker.setIcon(Gambar_Ikon_Loading);
             Marker_CCTV_Aktif.push(marker);
+            var cctvData = Semua_Lokasi_CCTV.find(item => item.marker === marker).data;
+            Cek_Status_CCTV(cctvData, marker);
           });
         }
       }
@@ -381,14 +384,6 @@
         if (!diDalam) {
           Object.values(Layer_Wilayah).forEach(layer => map.removeLayer(layer));
         }
-      });
-
-      map.whenReady(function() {
-        Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
-
-        setInterval(function() {
-          Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
-        }, (60000 * 10));
       });
     </script>
   </body>
