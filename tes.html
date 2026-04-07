@@ -369,7 +369,7 @@
       map.on('click', function(e) {
         Semua_Lokasi_CCTV.forEach(item => item.marker.closePopup());
         Object.values(Layer_Wilayah).forEach(layer => map.removeLayer(layer));
-      )};
+      });
 
       map.whenReady(function() {
         Semua_Lokasi_CCTV.forEach(item => Cek_Status_CCTV(item.data, item.marker));
