@@ -328,7 +328,7 @@
           .then(data => {
             var Layer_GeoJSON = L.geoJSON(data, {
               style: {
-                color: "#00ffff",
+                color: "#7fffff",
                 weight: 1,
                 fillOpacity: 0
               },
@@ -340,7 +340,7 @@
                 });
 
                 layer.on('mouseover', function() {
-                  layer.setStyle({ fillOpacity: 0.15 });
+                  layer.setStyle({ fillOpacity: 0.1 });
                 });
 
                 layer.on('mouseout', function() {
