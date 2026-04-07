@@ -329,6 +329,12 @@
         if (Layer_Wilayah[nama]) {
           Layer_Wilayah[nama].addTo(map);
         }
+
+        Semua_Lokasi_CCTV.forEach(item => {
+          if (item.data.wilayah !== nama) {
+            item.marker.closePopup();
+          }
+        });
       }
 
       Data_GeoJSON.forEach(path => {
