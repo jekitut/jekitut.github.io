@@ -374,7 +374,7 @@
         var diDalam = false;
 
         Semua_Wilayah_GeoJSON.forEach(layer => {
-          if (leafletPip.pointInLayer([e.lanlng.lng, e.lanlng.lat], layer).lenght > 0) {
+          if (leafletPip.pointInLayer([e.latlng.lng, e.latlng.lat], layer).lenght > 0) {
             diDalam = true;
           }
         });
