@@ -129,30 +129,21 @@
       <button id="Zoom_Out">−</button>
     </div>
 
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Batu/Kota.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Kediri/Kota.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Madiun/Kota.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Magetan/Kabupaten.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.js"></script>
-    <script src="Daftar_CCTV/Indonesia/Jawa_Timur/Pasuruan/Kota.js"></script>
+    <script src="Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.js"></script>
+    <script src="Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.js"></script>
+    <script src="Data/Indonesia/Jawa_Timur/Pasuruan/Kota.js"></script>
 
     <script>
       var Data_CCTV = [
         ...Kabupaten_Bojonegoro,
-        ...Kabupaten_Bondowoso,
-        ...Kabupaten_Magetan,
         ...Kabupaten_Pasuruan,
-        ...Kota_Batu,
-        ...Kota_Kediri,
-        ...Kota_Madiun,
         ...Kota_Pasuruan
       ];
 
       const Data_GeoJSON = [
-        "GeoJSON/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.geojson",
-        "GeoJSON/Indonesia/Jawa_Timur/Pasuruan/Kota.geojson"
+        "Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Pasuruan/Kota.geojson"
       ];
 
       var Video_HLS_Aktif = {};
@@ -201,7 +192,7 @@
         }
 
         var Video_Id = "video" + index;
-        var marker = L.marker([cctv.lat, cctv.lng], { icon: Gambar_Ikon_Loading });
+        var marker = L.marker([cctv.latitude, cctv.longitude], { icon: Gambar_Ikon_Loading });
         Wilayah_CCTV[cctv.wilayah].addLayer(marker);
         Semua_Data_Lokasi_CCTV.push({ data: cctv, marker: marker });
         cctv.tipe = cctv.url.includes(".m3u8") ? "hls" : "embed";
