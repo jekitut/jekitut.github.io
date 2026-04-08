@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peta CCTV</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <style>
+      body { margin:0; font-family: Arial; }
+      #map { height: 100vh; }
+
+      .leaflet-control-layers { display: none !important; }
+      .leaflet-control-zoom { display: none !important; }
+
+      .leaflet-popup-content {
+        margin: 0 !important;
+        overflow: visible !important;
+      }
+
+      .leaflet-popup-content-wrapper {
+        padding: 0 !important;
+        border: none !important;
+        background-color: transparent !important;
+      }
+
+      .leaflet-popup-tip {
+        background-color: lime !important;
+      }
+
+      .Tombol_Kiri_Atas {
+        top: 10px;
+        left: 10px;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1000;
+      }
+
+      .Tombol_Kiri_Atas button {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      }
+
+      .Tombol_Kiri_Atas button:hover {
+        background: #f0f0f0;
+        transform: scale(1.1);
+      }
+
+      .Container_Tombol_Buka_Embed {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Tombol_Buka_Embed {
+        padding: 10px 15px;
+        border-radius: 100px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        color: black !important;
+        background: lime;
+        transition: all 0.5s ease;
+      }
+
+      .Tombol_Buka_Embed:hover {
+        transform: scale(1.25);
+        background: #00cc00;
+      }
+
+      .PopUp_Video {
+        width: 350px;
+        background: transparent;
+      }
+
+      .PopUp_Judul {
+        padding: 4px;
+        font-size: 12px;
+        text-align: center;
+        color: black;
+        background: lime;
+        border-radius: 10px 10px 0 0;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      video:fullscreen {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        background: black;
+      }
+
+      video:-webkit-full-screen {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        background: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://unpkg.com/leaflet-pip/leaflet-pip.min.js"></script>
+    <div id="map"></div>
+
+    <div class="Tombol_Kiri_Atas">
+	  <button id="Ganti_Peta">🗺️</button>
+      <button id="Zoom_In">+</button>
+      <button id="Zoom_Out">−</button>
+    </div>
+
+    <script>
+      const Data_CCTV = [
+        "Data/Indonesia/Jawa_Timur/Batu/Kota.json",
+        "Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.json",
+        "Data/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.json",
+        "Data/Indonesia/Jawa_Timur/Kediri/Kota.json",
+        "Data/Indonesia/Jawa_Timur/Madiun/Kota.json",
+        "Data/Indonesia/Jawa_Timur/Magetan/Kabupaten.json",
+        "Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.json",
+        "Data/Indonesia/Jawa_Timur/Pasuruan/Kota.json"
+      ];
+
+      const Data_GeoJSON = [
+        "Data/Indonesia/Jawa_Timur/Batu/Kota.geojson",
+        "Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Kediri/Kota.geojson",
+        "Data/Indonesia/Jawa_Timur/Madiun/Kota.geojson",
+        "Data/Indonesia/Jawa_Timur/Magetan/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Pasuruan/Kota.geojson"
+      ];
+
+      var Video_HLS_Aktif = {};
+      var Wilayah_CCTV = {};
+      var Tampilkan_Lokasi_CCTV = [];
+      var Semua_Data_Lokasi_CCTV = [];
+      var Ambil_Semua_Data_CCTV = [];
+      var Ambil_Semua_Data_GeoJSON = [];
+      var map = L.map('map').setView([-7.790950, 112.730800], 10);
+      var Google_Satelit = L.tileLayer('https://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { subdomains:['mt0','mt1','mt2','mt3'], maxZoom: 20 });
+      var Esri_Satelit = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
+      var Esri_Jalan = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
+      var Esri_Nama = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
+      var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 20 });
+      var Gambar_Ikon_Loading = L.icon({ iconUrl: "Gambar/Ikon_Status_Loading.png", iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -30] });
+      var Gambar_Ikon_Offline = L.icon({ iconUrl: "Gambar/Ikon_Status_Offline.png", iconSize: [15, 15], iconAnchor: [7.5, 15], popupAnchor: [0, -15] });
+      var Gambar_Ikon_Online = L.icon({ iconUrl: "Gambar/Ikon_Status_Online.png", iconSize: [20, 20], iconAnchor: [10, 20], popupAnchor: [0, -20] });
+      var Peta_Aktif = Google_Satelit;
+      Google_Satelit.addTo(map);
+
+      document.getElementById("Ganti_Peta").onclick = function() {
+        if (Peta_Aktif === Google_Satelit) {
+          map.removeLayer(Google_Satelit);
+          map.addLayer(Esri_Satelit);
+          map.addLayer(Esri_Jalan);
+          map.addLayer(Esri_Nama);
+          Peta_Aktif = Esri_Satelit;
+        } else if (Peta_Aktif === Esri_Satelit) {
+          map.removeLayer(Esri_Satelit);
+          map.removeLayer(Esri_Jalan);
+          map.removeLayer(Esri_Nama);
+          map.addLayer(OpenStreetMap);
+          Peta_Aktif = OpenStreetMap;
+        } else {
+          map.removeLayer(OpenStreetMap);
+          map.addLayer(Google_Satelit);
+          Peta_Aktif = Google_Satelit;
+        }
+      };
+
+      document.getElementById('Zoom_In').onclick = function() { map.zoomIn(); };
+      document.getElementById('Zoom_Out').onclick = function() { map.zoomOut(); };
+
+      function Cek_Semua_Data_CCTV(Data_CCTV) {
+        Data_CCTV.forEach(function(cctv, index) {
+          if (!Wilayah_CCTV[cctv.wilayah]) {
+            Wilayah_CCTV[cctv.wilayah] = L.layerGroup();
+          }
+
+          var Video_Id = "video" + index;
+          var marker = L.marker([cctv.latitude, cctv.longitude], { icon: Gambar_Ikon_Loading });
+          Wilayah_CCTV[cctv.wilayah].addLayer(marker);
+          Semua_Data_Lokasi_CCTV.push({ data: cctv, marker: marker });
+          cctv.tipe = cctv.url.includes(".m3u8") ? "hls" : "embed";
+
+          if (cctv.tipe === "hls") {
+            marker.bindPopup(`
+              <div class="PopUp_Video">
+                <div class="PopUp_Judul"><b>${cctv.nama}</b></div>
+                <video id="${Video_Id}" controls autoplay></video>
+              </div>
+            `, { maxWidth: 350 });
+          } else {
+            marker.bindPopup(`
+              <div class="PopUp_Video">
+                <div class="PopUp_Judul"><b>${cctv.nama}</b></div>
+                <div class="Container_Tombol_Buka_Embed">
+                  <a href="${cctv.url}" target="_blank" class="Tombol_Buka_Embed">▶️ Buka Video</a>
+                </div>
+              </div>
+            `, { maxWidth: 350 });
+          }
+
+          marker.on('popupopen', function() {
+            if (cctv.tipe === "hls") {
+              var video = document.getElementById(Video_Id);
+
+              if (Hls.isSupported()) {
+                var hls = new Hls();
+                Video_HLS_Aktif[Video_Id] = hls
+                hls.loadSource(cctv.url);
+                hls.attachMedia(video);
+              } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = cctv.url;
+              }
+            }
+          });
+
+          marker.on('popupclose', function() {
+            if (cctv.tipe === "hls") {
+              var video = document.getElementById(Video_Id);
+
+              if (video) {
+                video.pause();
+                video.removeAttribute("src");
+                video.load();
+              }
+
+              if (Video_HLS_Aktif[Video_Id]) {
+                Video_HLS_Aktif[Video_Id].destroy();
+                delete Video_HLS_Aktif[Video_Id];
+              }
+            }
+          });
+        });
+      }
+
+      Promise.all(Data_CCTV.map(path => fetch(path).then(response => response.json())))
+        .then(results => {
+          results.forEach(json => {
+            json.data.forEach(item => {
+              item.url = (json.url_1 || "") + (item.url_1 || "") + (json.url_2 || "") + (item.url_2 || "") + (json.url_3 || "") + (item.url_3 || "") + (json.url_4 || "") + (item.url_4 || "") + (json.url_5 || "") + (item.url_5 || "");
+              if (!item.url || item.url === "") return;
+              Ambil_Semua_Data_CCTV.push(item);
+            });
+          });
+
+        Cek_Semua_Data_CCTV(Ambil_Semua_Data_CCTV);
+        });
+
+      function Cek_Status_CCTV(cctv, marker, retry = 0) {
+        marker.setIcon(Gambar_Ikon_Loading);
+
+        if (cctv.tipe === "hls") {
+          if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(cctv.url);
+
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+              marker.setIcon(Gambar_Ikon_Online);
+              hls.destroy();
+            });
+
+            hls.on(Hls.Events.ERROR, function(event, data) {
+              hls.destroy();
+
+              if (retry < 1) {
+                setTimeout(() => {
+                  Cek_Status_CCTV(cctv, marker, retry + 1);
+                }, 1000);
+              } else {
+                marker.setIcon(Gambar_Ikon_Offline);
+                hls.destroy();
+              }
+            });
+          } else {
+            var video = document.createElement("video");
+            video.src = cctv.url;
+
+            video.onloadedmetadata = function() {
+              marker.setIcon(Gambar_Ikon_Online);
+            };
+
+            video.onerror = function() {
+              if (retry < 1) {
+                setTimeout(() => {
+                  Cek_Status_CCTV(cctv, marker, retry + 1);
+                }, 1000);
+              } else {
+                marker.setIcon(Gambar_Ikon_Offline);
+              }
+            };
+          }
+        } else {
+          marker.setIcon(Gambar_Ikon_Online);
+        }
+      }
+
+      function Tampilkan_Wilayah(nama) {
+        Tampilkan_Lokasi_CCTV.forEach(marker => map.removeLayer(marker));
+        Tampilkan_Lokasi_CCTV = [];
+        Object.values(Wilayah_CCTV).forEach(layer => map.removeLayer(layer));
+
+        if (Wilayah_CCTV[nama]) {
+          Wilayah_CCTV[nama].addTo(map);
+
+          Wilayah_CCTV[nama].eachLayer(marker => {
+            marker.setIcon(Gambar_Ikon_Loading);
+            Tampilkan_Lokasi_CCTV.push(marker);
+            var Cek_Status_CCTV_Sesuai_Wilayah = Semua_Data_Lokasi_CCTV.find(item => item.marker === marker).data;
+            Cek_Status_CCTV(Cek_Status_CCTV_Sesuai_Wilayah, marker);
+          });
+        }
+      }
+
+      Data_GeoJSON.forEach(path => {
+        fetch(path)
+          .then(response => response.json())
+          .then(data => {
+            var Layer_GeoJSON = L.geoJSON(data, {
+              style: {
+                color: "#7fffff",
+                weight: 1,
+                fillOpacity: 0
+              },
+
+              onEachFeature: function(feature, layer) {
+                layer.on('click', function() {
+                  var nama = feature.properties.nm_dati2;
+                  Tampilkan_Wilayah(nama);
+                });
+
+                layer.on('mouseover', function() {
+                  layer.setStyle({ fillOpacity: 0.1 });
+                });
+
+                layer.on('mouseout', function() {
+                  layer.setStyle({ fillOpacity: 0 });
+                });
+              }
+            }).addTo(map);
+
+            Ambil_Semua_Data_GeoJSON.push(Layer_GeoJSON);
+          })
+      });
+
+      map.on('click', function(e) {
+        var Posisi_Klik_Di_Dalam_Wilayah = false;
+
+        Ambil_Semua_Data_GeoJSON.forEach(Layer_GeoJSON => {
+          if (leafletPip.pointInLayer([e.latlng.lng, e.latlng.lat], Layer_GeoJSON).length > 0) {
+            Posisi_Klik_Di_Dalam_Wilayah = true;
+          }
+        });
+
+        if (!Posisi_Klik_Di_Dalam_Wilayah) {
+          Tampilkan_Lokasi_CCTV = [];
+          Object.values(Wilayah_CCTV).forEach(layer => map.removeLayer(layer));
+        }
+      });
+    </script>
+  </body>
+</html>

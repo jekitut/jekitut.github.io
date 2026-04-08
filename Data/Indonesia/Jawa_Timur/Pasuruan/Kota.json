@@ -1,0 +1,17 @@
+{
+  "url_1": "https://cam.pasuruankota.go.id/",
+  "data": [
+    { "latitude": -7.644825, "longitude": 112.909850, "wilayah": "Kota Pasuruan", "kode": "15 - Taman Kota (01) Ged. Perpustakaan", "nama": "Taman Kota 01", "url_2": "tm-kota-1" },
+    { "latitude": -7.644725, "longitude": 112.909500, "wilayah": "Kota Pasuruan", "kode": "43 - Taman Kota (02) Area Dalam (Tengah)", "nama": "Taman Kota 02", "url_2": "tm-kota-2" },
+    { "latitude": -7.645050, "longitude": 112.909325, "wilayah": "Kota Pasuruan", "kode": "44 - Taman Kota (03) Pintu Masuk Taman", "nama": "Taman Kota 03", "url_2": "tm-kota-3" },
+    { "latitude": -7.645350, "longitude": 112.909450, "wilayah": "Kota Pasuruan", "kode": "45 - Taman Kota (04) Area Dalam (Tengah)", "nama": "Taman Kota 04", "url_2": "tm-kota-4" },
+    { "latitude": -7.679200, "longitude": 112.899200, "wilayah": "Kota Pasuruan", "kode": "167 - Batas Selatan Kota 2 Arah Selatan", "nama": "Tembokrejo Arah Selatan", "url_2": "bts-tembokrejo" },
+    { "latitude": -7.662500, "longitude": 112.893150, "wilayah": "Kota Pasuruan", "kode": "169 - Simpang Kebonagung Arah Selatan", "nama": "Kebonagung Arah Selatan", "url_2": "sm-kebonagung-2" },
+    { "latitude": -7.662325, "longitude": 112.893075, "wilayah": "Kota Pasuruan", "kode": "170 - Simpang Kebonagung Arah Barat", "nama": "Kebonagung Arah Barat", "url_2": "sm-kebonagung-3" },
+    { "latitude": -7.647610, "longitude": 112.917675, "wilayah": "Kota Pasuruan", "kode": "173 - Simpang Bugul Kidul DOOM", "nama": "Bugul Kidul PTZ", "url_2": "sm-bugul-1" },
+    { "latitude": -7.647625, "longitude": 112.917500, "wilayah": "Kota Pasuruan", "kode": "174 - Simpang Bugul Kidul Arah Selatan", "nama": "Bugul Kidul Arah Selatan", "url_2": "sm-bugul-2" },
+    { "latitude": -7.647400, "longitude": 112.917650, "wilayah": "Kota Pasuruan", "kode": "175 - Simpang Bugul Kidul Arah Barat", "nama": "Bugul Kidul Arah Barat", "url_2": "sm-bugul-3" },
+    { "latitude": -7.647650, "longitude": 112.917725, "wilayah": "Kota Pasuruan", "kode": "176 - Simpang Bugul Kidul Arah Timur", "nama": "Bugul Kidul Arah Timur", "url_2": "sm-bugul-4" },
+    { "latitude": -7.647450, "longitude": 112.917700, "wilayah": "Kota Pasuruan", "kode": "177 - Simpang Bugul Kidul Arah Utara", "nama": "Bugul Kidul Arah Utara", "url_2": "sm-bugul-5" }
+  ]
+}
