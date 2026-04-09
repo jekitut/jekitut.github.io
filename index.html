@@ -131,6 +131,8 @@
 
     <script>
       const Data_CCTV = [
+        "Data/Indonesia/Artificial_Intelligence.json",
+        "Data/Indonesia/HLSPlayer.net.json",
         "Data/Indonesia/Jawa_Timur/Batu/Kota.json",
         "Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.json",
         "Data/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.json",
@@ -148,6 +150,7 @@
         "Data/Indonesia/Jawa_Timur/Kediri/Kota.geojson",
         "Data/Indonesia/Jawa_Timur/Madiun/Kota.geojson",
         "Data/Indonesia/Jawa_Timur/Magetan/Kabupaten.geojson",
+        "Data/Indonesia/Jawa_Timur/Malang/Kabupaten.geojson",
         "Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.geojson",
         "Data/Indonesia/Jawa_Timur/Pasuruan/Kota.geojson"
       ];
@@ -164,9 +167,9 @@
       var Esri_Jalan = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
       var Esri_Nama = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
       var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 20 });
-      var Gambar_Ikon_Loading = L.icon({ iconUrl: "Gambar/Ikon_Status_Loading.png", iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -30] });
-      var Gambar_Ikon_Offline = L.icon({ iconUrl: "Gambar/Ikon_Status_Offline.png", iconSize: [15, 15], iconAnchor: [7.5, 15], popupAnchor: [0, -15] });
-      var Gambar_Ikon_Online = L.icon({ iconUrl: "Gambar/Ikon_Status_Online.png", iconSize: [20, 20], iconAnchor: [10, 20], popupAnchor: [0, -20] });
+      var Gambar_Ikon_Loading = L.icon({ iconUrl: "Data/Gambar/Ikon_Status_Loading.png", iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -30] });
+      var Gambar_Ikon_Offline = L.icon({ iconUrl: "Data/Gambar/Ikon_Status_Offline.png", iconSize: [15, 15], iconAnchor: [7.5, 15], popupAnchor: [0, -15] });
+      var Gambar_Ikon_Online = L.icon({ iconUrl: "Data/Gambar/Ikon_Status_Online.png", iconSize: [20, 20], iconAnchor: [10, 20], popupAnchor: [0, -20] });
       var Peta_Aktif = Google_Satelit;
       Google_Satelit.addTo(map);
 
@@ -193,6 +196,16 @@
       document.getElementById('Zoom_In').onclick = function() { map.zoomIn(); };
       document.getElementById('Zoom_Out').onclick = function() { map.zoomOut(); };
 
+      function Tipe_Video_CCTV(url) {
+        if (url.includes("hlsplayer.net")) {
+          return "embed";
+        } else if (url.includes(".m3u8")) {
+          return "hls";
+        } else {
+          return "embed";
+        }
+      }
+
       function Cek_Semua_Data_CCTV(Data_CCTV) {
         Data_CCTV.forEach(function(cctv, index) {
           if (!Wilayah_CCTV[cctv.wilayah]) {
@@ -203,7 +216,7 @@
           var marker = L.marker([cctv.latitude, cctv.longitude], { icon: Gambar_Ikon_Loading });
           Wilayah_CCTV[cctv.wilayah].addLayer(marker);
           Semua_Data_Lokasi_CCTV.push({ data: cctv, marker: marker });
-          cctv.tipe = cctv.url.includes(".m3u8") ? "hls" : "embed";
+          cctv.tipe = Tipe_Video_CCTV(cctv.url);
 
           if (cctv.tipe === "hls") {
             marker.bindPopup(`
