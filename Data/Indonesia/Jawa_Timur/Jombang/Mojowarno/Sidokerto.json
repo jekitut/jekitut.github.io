@@ -1,0 +1,7 @@
+{
+  "url_1": "https://cctv.sidokerto.desa.id/go2rtc/stream.html?src=",
+  "data": [
+    { "latitude": -7.589825, "longitude": 112.296275, "wilayah": "Kabupaten Jombang", "kode": "Depan Balai Desa", "nama": "Depan Balai Desa", "url_2": "depan-baldes" },
+    { "latitude": -7.594375, "longitude": 112.302125, "wilayah": "Jombang", "kode": "SDN 1 Sidokerto", "nama": "SDN 1 Sidokerto", "url_2": "sdn1" }
+  ]
+}
