@@ -133,30 +133,30 @@
 
     <script>
       const Data_CCTV = [
-        "Data/Indonesia/Artificial_Intelligence.json",
-        "Data/Indonesia/HLSPlayer.net.json",
-        "Data/Indonesia/Jawa_Timur/Batu/Kota.json",
-        "Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.json",
-        "Data/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.json",
-        "Data/Indonesia/Jawa_Timur/Jombang/Mojowarno/Sidokerto.json",
-        "Data/Indonesia/Jawa_Timur/Kediri/Kota.json",
-        "Data/Indonesia/Jawa_Timur/Madiun/Kota.json",
-        "Data/Indonesia/Jawa_Timur/Magetan/Kabupaten.json",
-        "Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.json",
-        "Data/Indonesia/Jawa_Timur/Pasuruan/Kota.json"
+        "Data/Indonesia/Artificial Intelligence.json",
+        "Data/Indonesia/PT BAJA TITIAN UTAMA.json",
+        "Data/Indonesia/Jawa Timur/Batu/Kota.json",
+        "Data/Indonesia/Jawa Timur/Bojonegoro/Kabupaten.json",
+        "Data/Indonesia/Jawa Timur/Bondowoso/Kabupaten.json",
+        "Data/Indonesia/Jawa Timur/Jombang/Mojowarno/Sidokerto.json",
+        "Data/Indonesia/Jawa Timur/Kediri/Kota.json",
+        "Data/Indonesia/Jawa Timur/Madiun/Kota.json",
+        "Data/Indonesia/Jawa Timur/Magetan/Kabupaten.json",
+        "Data/Indonesia/Jawa Timur/Pasuruan/Kabupaten.json",
+        "Data/Indonesia/Jawa Timur/Pasuruan/Kota.json"
       ];
 
       const Data_GeoJSON = [
-        "Data/Indonesia/Jawa_Timur/Batu/Kota.geojson",
-        "Data/Indonesia/Jawa_Timur/Bojonegoro/Kabupaten.geojson",
-        "Data/Indonesia/Jawa_Timur/Bondowoso/Kabupaten.geojson",
-        "Data/Indonesia/Jawa_Timur/Jombang/Kabupaten.geojson",
-        "Data/Indonesia/Jawa_Timur/Kediri/Kota.geojson",
-        "Data/Indonesia/Jawa_Timur/Madiun/Kota.geojson",
-        "Data/Indonesia/Jawa_Timur/Magetan/Kabupaten.geojson",
-        "Data/Indonesia/Jawa_Timur/Malang/Kabupaten.geojson",
-        "Data/Indonesia/Jawa_Timur/Pasuruan/Kabupaten.geojson",
-        "Data/Indonesia/Jawa_Timur/Pasuruan/Kota.geojson"
+        "Data/Indonesia/Jawa Timur/Batu/Kota.geojson",
+        "Data/Indonesia/Jawa Timur/Bojonegoro/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Bondowoso/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Jombang/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Kediri/Kota.geojson",
+        "Data/Indonesia/Jawa Timur/Madiun/Kota.geojson",
+        "Data/Indonesia/Jawa Timur/Magetan/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Malang/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Pasuruan/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Pasuruan/Kota.geojson"
       ];
 
       var Video_HLS_Aktif = {};
@@ -172,9 +172,9 @@
       var Esri_Jalan = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
       var Esri_Nama = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', { maxZoom: 20});
       var OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 20 });
-      var Gambar_Ikon_Loading = L.icon({ iconUrl: "Data/Gambar/Ikon_Status_Loading.png", iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -30] });
-      var Gambar_Ikon_Offline = L.icon({ iconUrl: "Data/Gambar/Ikon_Status_Offline.png", iconSize: [15, 15], iconAnchor: [7.5, 15], popupAnchor: [0, -15] });
-      var Gambar_Ikon_Online = L.icon({ iconUrl: "Data/Gambar/Ikon_Status_Online.png", iconSize: [20, 20], iconAnchor: [10, 20], popupAnchor: [0, -20] });
+      var Gambar_Ikon_Loading = L.icon({ iconUrl: "Data/Gambar/Ikon Status Loading.png", iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -30] });
+      var Gambar_Ikon_Offline = L.icon({ iconUrl: "Data/Gambar/Ikon Status Offline.png", iconSize: [15, 15], iconAnchor: [7.5, 15], popupAnchor: [0, -15] });
+      var Gambar_Ikon_Online = L.icon({ iconUrl: "Data/Gambar/Ikon Status Online.png", iconSize: [20, 20], iconAnchor: [10, 20], popupAnchor: [0, -20] });
       var Peta_Aktif = Google_Satelit;
       Google_Satelit.addTo(map);
 
