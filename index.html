@@ -161,6 +161,7 @@
 
       var Video_HLS_Aktif = {};
       var Player_Aktif = {};
+      var Cache_Status_CCTV = {};
       var Wilayah_CCTV = {};
       var Tampilkan_Lokasi_CCTV = [];
       var Semua_Data_Lokasi_CCTV = [];
@@ -207,9 +208,7 @@
       }
 
       function Cek_Tipe_Video_CCTV(url) {
-        if (url.includes("hlsplayer.net")) {
-          return "embed";
-        } else if (url.includes(".m3u8")) {
+        if (url.includes(".m3u8")) {
           return "m3u8";
         } else if (url.includes(".mp4")) {
           return "mp4";
@@ -319,21 +318,37 @@
       });
 
       function Cek_Status_CCTV(cctv, marker, retry = 0) {
-        var video = document.createElement("video");
+        if (Cache_Status_CCTV[cctv.url]) {
+          marker.setIcon(Cache_Status_CCTV[cctv.url]);
+          return;
+        }
+
         marker.setIcon(Gambar_Ikon_Loading);
 
         if (cctv.tipe === "m3u8") {
           if (Hls.isSupported()) {
-            var hls = new Hls();
+            var hls = new Hls({
+              maxBufferLength: 1,
+              maxMaxBufferLength: 2,
+              enableWorker: false
+            });
+
+            var video = document.createElement("video");
             hls.loadSource(cctv.url);
             hls.attachMedia(video);
+            let Sudah_di_Cek = false;
 
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
+              if (Sudah_di_Cek) return;
+              Sudah_di_Cek = true;
               marker.setIcon(Gambar_Ikon_Online);
+              Cache_Status_CCTV[cctv.url] = Gambar_Ikon_Online;
               hls.destroy();
             });
 
             hls.on(Hls.Events.ERROR, function(event, data) {
+              if (Sudah_di_Cek) return;
+              Sudah_di_Cek = true;
               hls.destroy();
 
               if (retry < 1) {
@@ -342,30 +357,49 @@
                 }, 1000);
               } else {
                 marker.setIcon(Gambar_Ikon_Offline);
-                hls.destroy();
+                Cache_Status_CCTV[cctv.url] = Gambar_Ikon_Offline;
               }
             });
           }
         } else if (cctv.tipe === "mp4") {
+          var video = document.createElement("video");
+          video.preload = "metadata";
+          video.muted = true;
+          video.playsInline = true;
+          video.currentTime = 0.1;
           video.src = cctv.url;
-          video.playsInLine = true;
+          let Sudah_di_Cek = false;
 
           video.onloadedmetadata = function() {
+            if (Sudah_di_Cek) return;
+            Sudah_di_Cek = true;
             marker.setIcon(Gambar_Ikon_Online);
+            Cache_Status_CCTV[cctv.url] = Gambar_Ikon_Online;
+            video.pause();
+            video.removeAttribute("src");
+            video.load();
           };
 
           video.onerror = function() {
+            if (Sudah_di_Cek) return;
+            Sudah_di_Cek = true;
+
             if (retry < 1) {
               setTimeout(() => {
                 Cek_Status_CCTV(cctv, marker, retry + 1);
               }, 1000);
             } else {
               marker.setIcon(Gambar_Ikon_Offline);
+              Cache_Status_CCTV[cctv.url] = Gambar_Ikon_Offline;
             }
           };
         } else {
           marker.setIcon(Gambar_Ikon_Online);
         }
+      }
+
+      function Marker_Dalam_View(marker) {
+        return map.getBounds().contains(marker.getLatLng());
       }
 
       function Tampilkan_Wilayah(nama) {
@@ -374,9 +408,11 @@
         Object.values(Wilayah_CCTV).forEach(layer => map.removeLayer(layer));
 
         if (Wilayah_CCTV[nama]) {
+          let delay = 0;
           Wilayah_CCTV[nama].addTo(map);
 
           Wilayah_CCTV[nama].eachLayer(marker => {
+            if (!Marker_Dalam_View(marker)) return;
             marker.setIcon(Gambar_Ikon_Loading);
             Tampilkan_Lokasi_CCTV.push(marker);
             var Cek_Status_CCTV_Sesuai_Wilayah = Semua_Data_Lokasi_CCTV.find(item => item.marker === marker).data;
@@ -428,6 +464,10 @@
           Tampilkan_Lokasi_CCTV = [];
           Object.values(Wilayah_CCTV).forEach(layer => map.removeLayer(layer));
         }
+      });
+
+      map.on('movestart', function() {
+        Tampilkan_Lokasi_CCTV = [];
       });
     </script>
   </body>
