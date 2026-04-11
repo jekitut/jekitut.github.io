@@ -201,6 +201,11 @@
       document.getElementById('Zoom_In').onclick = function() { map.zoomIn(); };
       document.getElementById('Zoom_Out').onclick = function() { map.zoomOut(); };
 
+      function Cek_Latitude_dan_Longitude(lat, lng) {
+        if (lat === 0 || lng === 0) return false;
+        return true;
+      }
+
       function Cek_Tipe_Video_CCTV(url) {
         if (url.includes("hlsplayer.net")) {
           return "embed";
@@ -215,11 +220,13 @@
 
       function Cek_Semua_Data_CCTV(Data_CCTV) {
         Data_CCTV.forEach(function(cctv, index) {
+          if (!Cek_Latitude_dan_Longitude(cctv.latitude, cctv.longitude)) return;
+
           if (!Wilayah_CCTV[cctv.wilayah]) {
             Wilayah_CCTV[cctv.wilayah] = L.layerGroup();
           }
 
-          var Video_Id = "video_" + Date.now() + "_" + index;
+          var Video_Id = "video_" + index + "_" + Math.random().toString(36).substr(2, 5);
           var marker = L.marker([cctv.latitude, cctv.longitude], { icon: Gambar_Ikon_Loading });
           Wilayah_CCTV[cctv.wilayah].addLayer(marker);
           Semua_Data_Lokasi_CCTV.push({ data: cctv, marker: marker });
@@ -292,26 +299,24 @@
         });
       }
 
-      Promise.all(Data_CCTV.map(path => fetch(path).then(response => response.json())))
-        .then(results => {
-          results.forEach(json => {
-            json.data.forEach(item => {
-              item.url = [
-                json.url_1, item.url_1,
-                json.url_2, item.url_2,
-                json.url_3, item.url_3,
-                json.url_4, item.url_4,
-                json.url_5, item.url_5
-              ]
+      Promise.all(Data_CCTV.map(path => fetch(path).then(response => response.json()))).then(results => {
+        results.forEach(json => {
+          json.data.forEach(item => {
+            item.url = [
+              json.url_1, item.url_1,
+              json.url_2, item.url_2,
+              json.url_3, item.url_3,
+              json.url_4, item.url_4,
+              json.url_5, item.url_5
+            ].filter(Boolean).map(x => x.trim()).join('');
 
-              .filter(Boolean).map(x => x.trim()).join('');
-              if (!item.url || item.url === "") return;
-              Ambil_Semua_Data_CCTV.push(item);
-            });
+            if (!item.url || item.url === "") return;
+            Ambil_Semua_Data_CCTV.push(item);
           });
+        });
 
         Cek_Semua_Data_CCTV(Ambil_Semua_Data_CCTV);
-        });
+      });
 
       function Cek_Status_CCTV(cctv, marker, retry = 0) {
         var video = document.createElement("video");
@@ -381,35 +386,33 @@
       }
 
       Data_GeoJSON.forEach(path => {
-        fetch(path)
-          .then(response => response.json())
-          .then(data => {
-            var Layer_GeoJSON = L.geoJSON(data, {
-              style: {
-                color: "#7fffff",
-                weight: 1,
-                fillOpacity: 0
-              },
+        fetch(path).then(response => response.json()).then(data => {
+          var Layer_GeoJSON = L.geoJSON(data, {
+            style: {
+              color: "#7fffff",
+              weight: 1,
+              fillOpacity: 0
+            },
 
-              onEachFeature: function(feature, layer) {
-                layer.on('click', function() {
-                  var nama = feature.properties.nm_dati2;
-                  if (!nama) return;
-                  Tampilkan_Wilayah(nama);
-                });
+            onEachFeature: function(feature, layer) {
+              layer.on('click', function() {
+                var nama = feature.properties.nm_dati2;
+                if (!nama) return;
+                Tampilkan_Wilayah(nama);
+              });
 
-                layer.on('mouseover', function() {
-                  layer.setStyle({ fillOpacity: 0.1 });
-                });
+              layer.on('mouseover', function() {
+                layer.setStyle({ fillOpacity: 0.1 });
+              });
 
-                layer.on('mouseout', function() {
-                  layer.setStyle({ fillOpacity: 0 });
-                });
-              }
-            }).addTo(map);
+              layer.on('mouseout', function() {
+                layer.setStyle({ fillOpacity: 0 });
+              });
+            }
+          }).addTo(map);
 
-            Ambil_Semua_Data_GeoJSON.push(Layer_GeoJSON);
-          })
+          Ambil_Semua_Data_GeoJSON.push(Layer_GeoJSON);
+        })
       });
 
       map.on('click', function(e) {
