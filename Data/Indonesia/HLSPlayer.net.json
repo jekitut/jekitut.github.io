@@ -1,5 +1,5 @@
 {
-  "url_1": "https://hlsplayer.net/embed?type=m3u8&src=",
+  "url_kosong": "https://hlsplayer.net/embed?type=m3u8&src=",
   "data": [
     { "latitude": -7.827350, "longitude": 112.008075, "wilayah": "Kota Kediri", "kode": "Bandarngalim - Jembatan Bandarngalim - Kediri", "nama": "Jembatan Bandar Ngalim", "url_2": "https://apps.ptbtu.com:8078/hls-proxy/16/index.m3u8" },
     { "latitude": -7.163950, "longitude": 111.867650, "wilayah": "Kabupaten Bojonegoro", "kode": "Jetak - Jembatan Jetak - Bojonegoro", "nama": "Jembatan Jetak", "url_2": "https://apps.ptbtu.com:8078/hls-proxy/25/index.m3u8" }
