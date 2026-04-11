@@ -1,7 +1,9 @@
 {
-  "url_1": "https://cctv.sidokerto.desa.id/go2rtc/stream.html?src=",
+  "url_1": "https://cctv.sidokerto.desa.id/go2rtc/api/stream.mp4?src=",
   "data": [
     { "latitude": -7.589825, "longitude": 112.296275, "wilayah": "Kabupaten Jombang", "kode": "Depan Balai Desa", "nama": "Depan Balai Desa", "url_2": "depan-baldes" },
-    { "latitude": -7.594375, "longitude": 112.302125, "wilayah": "Jombang", "kode": "SDN 1 Sidokerto", "nama": "SDN 1 Sidokerto", "url_2": "sdn1" }
+    { "latitude": -7.595050, "longitude": 112.289750, "wilayah": "Kabupaten Jombang", "kode": "Perbatasan Bendungsari", "nama": "Perbatasan Bendungsari", "url_2": "bendungsari" },
+    { "latitude": -7.592175, "longitude": 112.290900, "wilayah": "Kabupaten Jombang", "kode": "Jembatan Pariterong", "nama": "Jembatan Pariterong", "url_2": "pariterong" },
+    { "latitude": -7.594375, "longitude": 112.302125, "wilayah": "Kabupaten Jombang", "kode": "SDN 1 Sidokerto", "nama": "SDN 1 Sidokerto", "url_2": "sdn1" }
   ]
 }

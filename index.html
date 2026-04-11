@@ -5,6 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-pip/leaflet-pip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.polyfilled.min.js"></script>
 
     <style>
       body { margin:0; font-family: Arial; }
@@ -118,9 +123,6 @@
   </head>
 
   <body>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script src="https://unpkg.com/leaflet-pip/leaflet-pip.min.js"></script>
     <div id="map"></div>
 
     <div class="Tombol_Kiri_Atas">
@@ -158,6 +160,7 @@
       ];
 
       var Video_HLS_Aktif = {};
+      var Player_Aktif = {};
       var Wilayah_CCTV = {};
       var Tampilkan_Lokasi_CCTV = [];
       var Semua_Data_Lokasi_CCTV = [];
@@ -198,11 +201,13 @@
       document.getElementById('Zoom_In').onclick = function() { map.zoomIn(); };
       document.getElementById('Zoom_Out').onclick = function() { map.zoomOut(); };
 
-      function Tipe_Video_CCTV(url) {
+      function Cek_Tipe_Video_CCTV(url) {
         if (url.includes("hlsplayer.net")) {
           return "embed";
         } else if (url.includes(".m3u8")) {
-          return "hls";
+          return "m3u8";
+        } else if (url.includes(".mp4")) {
+          return "mp4";
         } else {
           return "embed";
         }
@@ -214,17 +219,17 @@
             Wilayah_CCTV[cctv.wilayah] = L.layerGroup();
           }
 
-          var Video_Id = "video" + index;
+          var Video_Id = "video_" + Date.now() + "_" + index;
           var marker = L.marker([cctv.latitude, cctv.longitude], { icon: Gambar_Ikon_Loading });
           Wilayah_CCTV[cctv.wilayah].addLayer(marker);
           Semua_Data_Lokasi_CCTV.push({ data: cctv, marker: marker });
-          cctv.tipe = Tipe_Video_CCTV(cctv.url);
+          cctv.tipe = Cek_Tipe_Video_CCTV(cctv.url);
 
-          if (cctv.tipe === "hls") {
+          if (cctv.tipe === "m3u8" || cctv.tipe === "mp4") {
             marker.bindPopup(`
               <div class="PopUp_Video">
                 <div class="PopUp_Judul"><b>${cctv.nama}</b></div>
-                <video id="${Video_Id}" controls autoplay></video>
+                <video id="${Video_Id}" controls autoplay playsinline></video>
               </div>
             `, { maxWidth: 350 });
           } else {
@@ -239,9 +244,10 @@
           }
 
           marker.on('popupopen', function() {
-            if (cctv.tipe === "hls") {
-              var video = document.getElementById(Video_Id);
+            var video = document.getElementById(Video_Id);
+            if (!video) return;
 
+            if (cctv.tipe === "m3u8") {
               if (Hls.isSupported()) {
                 var hls = new Hls();
                 Video_HLS_Aktif[Video_Id] = hls
@@ -250,11 +256,20 @@
               } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = cctv.url;
               }
+            } else if (cctv.tipe === "mp4") {
+              video.src = cctv.url;
+            }
+
+            video.load();
+            video.play().catch(() => {});
+
+            if (!Player_Aktif[Video_Id]) {
+              Player_Aktif[Video_Id] = new Plyr(video);
             }
           });
 
           marker.on('popupclose', function() {
-            if (cctv.tipe === "hls") {
+            if (cctv.tipe === "m3u8" || cctv.tipe === "mp4") {
               var video = document.getElementById(Video_Id);
 
               if (video) {
@@ -267,6 +282,11 @@
                 Video_HLS_Aktif[Video_Id].destroy();
                 delete Video_HLS_Aktif[Video_Id];
               }
+
+              if (Player_Aktif[Video_Id]) {
+                Player_Aktif[Video_Id].destroy();
+                delete Player_Aktif[Video_Id];
+              }
             }
           });
         });
@@ -276,7 +296,15 @@
         .then(results => {
           results.forEach(json => {
             json.data.forEach(item => {
-              item.url = (json.url_1 || "") + (item.url_1 || "") + (json.url_2 || "") + (item.url_2 || "") + (json.url_3 || "") + (item.url_3 || "") + (json.url_4 || "") + (item.url_4 || "") + (json.url_5 || "") + (item.url_5 || "");
+              item.url = [
+                json.url_1, item.url_1,
+                json.url_2, item.url_2,
+                json.url_3, item.url_3,
+                json.url_4, item.url_4,
+                json.url_5, item.url_5
+              ]
+
+              .filter(Boolean).map(x => x.trim()).join('');
               if (!item.url || item.url === "") return;
               Ambil_Semua_Data_CCTV.push(item);
             });
@@ -286,12 +314,14 @@
         });
 
       function Cek_Status_CCTV(cctv, marker, retry = 0) {
+        var video = document.createElement("video");
         marker.setIcon(Gambar_Ikon_Loading);
 
-        if (cctv.tipe === "hls") {
+        if (cctv.tipe === "m3u8") {
           if (Hls.isSupported()) {
             var hls = new Hls();
             hls.loadSource(cctv.url);
+            hls.attachMedia(video);
 
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
               marker.setIcon(Gambar_Ikon_Online);
@@ -310,24 +340,24 @@
                 hls.destroy();
               }
             });
-          } else {
-            var video = document.createElement("video");
-            video.src = cctv.url;
-
-            video.onloadedmetadata = function() {
-              marker.setIcon(Gambar_Ikon_Online);
-            };
-
-            video.onerror = function() {
-              if (retry < 1) {
-                setTimeout(() => {
-                  Cek_Status_CCTV(cctv, marker, retry + 1);
-                }, 1000);
-              } else {
-                marker.setIcon(Gambar_Ikon_Offline);
-              }
-            };
           }
+        } else if (cctv.tipe === "mp4") {
+          video.src = cctv.url;
+          video.playsInLine = true;
+
+          video.onloadedmetadata = function() {
+            marker.setIcon(Gambar_Ikon_Online);
+          };
+
+          video.onerror = function() {
+            if (retry < 1) {
+              setTimeout(() => {
+                Cek_Status_CCTV(cctv, marker, retry + 1);
+              }, 1000);
+            } else {
+              marker.setIcon(Gambar_Ikon_Offline);
+            }
+          };
         } else {
           marker.setIcon(Gambar_Ikon_Online);
         }
@@ -364,6 +394,7 @@
               onEachFeature: function(feature, layer) {
                 layer.on('click', function() {
                   var nama = feature.properties.nm_dati2;
+                  if (!nama) return;
                   Tampilkan_Wilayah(nama);
                 });
 
