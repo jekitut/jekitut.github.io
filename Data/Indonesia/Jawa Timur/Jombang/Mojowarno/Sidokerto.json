@@ -2,7 +2,7 @@
   "url_1": "https://cctv.sidokerto.desa.id/go2rtc/api/stream.mp4?src=",
   "data": [
     { "latitude": -7.589825, "longitude": 112.296275, "wilayah": "Kabupaten Jombang", "kode": "Depan Balai Desa", "nama": "Depan Balai Desa", "url_2": "depan-baldes" },
-    { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Jombang", "kode": "Pos Kamling Utara", "nama": "Pos Kamling Utara", "url_2": "pos-kamling1" },
+    { "latitude": -7.590750, "longitude": 112.301315, "wilayah": "Kabupaten Jombang", "kode": "Pos Kamling Utara", "nama": "Pos Kamling Utara", "url_2": "pos-kamling1" },
     { "latitude": -7.598425, "longitude": 112.309575, "wilayah": "Kabupaten Jombang", "kode": "Pertigaan Budug Barat", "nama": "Pertigaan Budug Barat", "url_2": "budug1" },
     { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Jombang", "kode": "Bumdes Lele Barat", "nama": "Bumdes Lele Barat", "url_2": "bumdeslele-barat" },
     { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Jombang", "kode": "Bumdes Lele Tengah 2", "nama": "Bumdes Lele Tengah 2", "url_2": "bumdeslele-tengah-2" },
@@ -24,7 +24,7 @@
     { "latitude": -7.598775, "longitude": 112.312375, "wilayah": "Kabupaten Jombang", "kode": "Budug Tengah", "nama": "Budug Tengah", "url_2": "budug2" },
     { "latitude": -7.592425, "longitude": 112.300525, "wilayah": "Kabupaten Jombang", "kode": "Simpang Masjid At-Taqwa", "nama": "Simpang Masjid At-Taqwa", "url_2": "at-taqwa" },
     { "latitude": -7.592025, "longitude": 112.300725, "wilayah": "Kabupaten Jombang", "kode": "Simpang Jl. Teja- Jl. Melati", "nama": "Simpang Jl. Teja- Jl. Melati", "url_2": "melati-teja" },
-    { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Jombang", "kode": "Pos Kamling Selatan", "nama": "Pos Kamling Selatan", "url_2": "pos-kamling2" },
+    { "latitude": -7.590700, "longitude": 112.301335, "wilayah": "Kabupaten Jombang", "kode": "Pos Kamling Selatan", "nama": "Pos Kamling Selatan", "url_2": "pos-kamling2" },
     { "latitude": -7.590025, "longitude": 112.301675, "wilayah": "Kabupaten Jombang", "kode": "Musholla Toriqul Jannah", "nama": "Musholla Toriqul Jannah", "url_2": "t-jannah" },
     { "latitude": -7.589250, "longitude": 112.294275, "wilayah": "Kabupaten Jombang", "kode": "Masjid An Nur - Halaman", "nama": "Masjid An Nur - Halaman", "url_2": "annur-3" },
     { "latitude": -7.589225, "longitude": 112.294200, "wilayah": "Kabupaten Jombang", "kode": "Masjid An Nur - Teras", "nama": "Masjid An Nur - Teras", "url_2": "annur-2" },

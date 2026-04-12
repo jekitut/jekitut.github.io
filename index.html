@@ -134,6 +134,7 @@
     <script>
       const Data_CCTV = [
         "Data/Indonesia/Artificial Intelligence.json",
+        "Data/Indonesia/Pengadilan Agama.json",
         "Data/Indonesia/PT BAJA TITIAN UTAMA.json",
         "Data/Indonesia/Jawa Timur/Batu/Kota.json",
         "Data/Indonesia/Jawa Timur/Bojonegoro/Kabupaten.json",
@@ -306,7 +307,9 @@
               json.url_2, item.url_2,
               json.url_3, item.url_3,
               json.url_4, item.url_4,
-              json.url_5, item.url_5
+              json.url_5, item.url_5,
+              json.url_6, item.url_6,
+              json.url_7, item.url_7
             ].filter(Boolean).map(x => x.trim()).join('');
 
             if (!item.url || item.url === "") return;
