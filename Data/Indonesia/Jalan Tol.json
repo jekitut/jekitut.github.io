@@ -1,7 +1,16 @@
 {
-  "url_1": "https://jmlive.jasamarga.com/hls/",
-  "url_3": "/index.m3u8",
+  "url_1": "https://cdn2.jmto.co.id/WebRTCAppEE/streams/",
+  "url_3": ".m3u8",
   "data": [
-    { "latitude": -7.859343, "longitude": 112.706465, "wilayah": "Kabupaten Malang", "kode": "1189-23-434", "nama": "KM 80+300 IC Lawang", "url_2": "23/b7b6e8fd-cb81-450c-9386-18a136311c02" }
+    { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Malang", "kode": "", "nama": "", "url_2": "" },
+    { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Malang", "kode": "", "nama": "", "url_2": "" },
+    { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Malang", "kode": "", "nama": "", "url_2": "" },
+    { "latitude": -7.901275, "longitude": 112.694485, "wilayah": "Kabupaten Malang", "kode": "1196-23-442", "nama": "KM 85+300 A", "url_2": "6gKtVZQ60SkVLH0g1711840547877" },
+    { "latitude": -7.901200, "longitude": 112.694525, "wilayah": "Kabupaten Malang", "kode": "1197-23-442", "nama": "KM 85+300 B", "url_2": "RDjWKdr9sdxTJs3J1711840657040" },
+    { "latitude": -7.908125, "longitude": 112.689400, "wilayah": "Kabupaten Malang", "kode": "1198-23-442", "nama": "KM 86+300", "url_2": "ppdpHl3BQKOSxSLb1711840728552" },
+    { "latitude": -7.915425, "longitude": 112.682650, "wilayah": "Kabupaten Malang", "kode": "1199-23-442", "nama": "KM 87+300 A", "url_2": "KO4gs7bIyE9MJtpV1711841168748" },
+    { "latitude": -7.915500, "longitude": 112.682575, "wilayah": "Kabupaten Malang", "kode": "1200-23-442", "nama": "KM 87+300 B", "url_2": "pOBaqxfPiZhIJ8Z61711841254064" },
+    { "latitude": -7.924975, "longitude": 112.676525, "wilayah": "Kabupaten Malang", "kode": "1201-23-442", "nama": "KM 88+600 IC Karanglo", "url_2": "RiHIDJNiQX2GEsgQ1711841320714" },
+    { "latitude": -7.916050, "longitude": 112.655500, "wilayah": "Kabupaten Malang", "kode": "1202-23-442", "nama": "Arteri Karanglo", "url_2": "KrQPWL8IShPEFihX1711841376219" }
   ]
 }
