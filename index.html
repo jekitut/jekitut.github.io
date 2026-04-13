@@ -213,7 +213,9 @@
       }
 
       function Cek_Tipe_Video_CCTV(url) {
-        if (url.includes(".m3u8")) {
+        if (url.includes("testing-apicctv.gresikkab.go.id")) {
+          return "embed";
+        } else if (url.includes(".m3u8")) {
           return "m3u8";
         } else if (url.includes(".mp4")) {
           return "mp4";
