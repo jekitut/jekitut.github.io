@@ -1,0 +1,8 @@
+{
+  "url_1": "https://apps.ptbtu.com:8078/hls-proxy/",
+  "url_3": "/index.m3u8",
+  "data": [
+    { "latitude": -7.827350, "longitude": 112.008075, "wilayah": "Kota Kediri", "kode": "Bandarngalim - Jembatan Bandarngalim - Kediri", "nama": "Jembatan Bandar Ngalim", "url_2": "16" },
+    { "latitude": -7.163950, "longitude": 111.867650, "wilayah": "Kabupaten Bojonegoro", "kode": "Jetak - Jembatan Jetak - Bojonegoro", "nama": "Jembatan Jetak", "url_2": "25" }
+  ]
+}

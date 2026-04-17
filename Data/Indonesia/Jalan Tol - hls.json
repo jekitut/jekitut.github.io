@@ -1,0 +1,13 @@
+{
+  "url_1": "https://jmlive.jasamarga.com/hls/",
+  "url_3": "/index.m3u8",
+  "data": [
+    { "latitude": -7.975890, "longitude": 112.680200, "wilayah": "Kabupaten Malang", "kode": "1618-23-436", "nama": "KM 95+850", "url_2": "23/6e12c095-f3e8-46c1-bae2-ae4f8344cbd3" },
+    { "latitude": -7.923700, "longitude": 112.671625, "wilayah": "Kabupaten Malang", "kode": "2162-23-436", "nama": "GT Singosari Entrance", "url_2": "23/7d7e0301-79f4-4ba4-8fa3-ca1bc30edc55" },
+    { "latitude": -7.924225, "longitude": 112.672275, "wilayah": "Kabupaten Malang", "kode": "2163-23-436", "nama": "GT Singosari Exit", "url_2": "23/5bf35b09-7535-4698-8683-b0dc5f075497" },
+    { "latitude": -7.956225, "longitude": 112.696570, "wilayah": "Kabupaten Malang", "kode": "2164-23-436", "nama": "GT Pakis Entrance", "url_2": "23/bcfd0ccf-1e25-4e05-91f8-88c5ff0bfd6b" },
+    { "latitude": -7.956800, "longitude": 112.696100, "wilayah": "Kabupaten Malang", "kode": "2165-23-436", "nama": "GT Pakis Exit", "url_2": "23/34397942-deb6-4732-a62b-117b9b6d1c9e" },
+    { "latitude": -7.977825, "longitude": 112.674540, "wilayah": "Kota Malang", "kode": "2166-23-436", "nama": "GT Malang Entrance", "url_2": "23/7e5a18c6-ed0b-4e69-88df-cb4d9693071e" },
+    { "latitude": -7.915965, "longitude": 112.655265, "wilayah": "Kabupaten Malang", "kode": "2167-23-434 | 2167-23-436", "nama": "Arteri Singosari", "url_2": "23/8a9e02a5-dd33-477c-b3e8-c341cc9031b6" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "url_1": "https://pplterpadu.kedirikota.go.id:8888/",
+  "url_3": "/stream.m3u8",
+  "data": [
+    { "latitude": -7.827675, "longitude": 111.996575, "wilayah": "Kota Kediri", "kode": "1", "nama": "Muning", "url_2": "muning" },
+    { "latitude": -7.827125, "longitude": 112.005700, "wilayah": "Kota Kediri", "kode": "2", "nama": "Bandar Ngalim", "url_2": "bandar_ngalim" },
+    { "latitude": -7.827700, "longitude": 112.010500, "wilayah": "Kota Kediri", "kode": "3", "nama": "Alun-alun", "url_2": "alun_alun" },
+    { "latitude": -7.828250, "longitude": 111.984975, "wilayah": "Kota Kediri", "kode": "4", "nama": "Tamanan", "url_2": "tamanan" },
+    { "latitude": -7.793775, "longitude": 112.009800, "wilayah": "Kota Kediri", "kode": "7", "nama": "Semampir", "url_2": "semampir" },
+    { "latitude": -7.780675, "longitude": 112.000550, "wilayah": "Kota Kediri", "kode": "8", "nama": "Mrican", "url_2": "mrican" },
+    { "latitude": -7.795150, "longitude": 112.001850, "wilayah": "Kota Kediri", "kode": "9", "nama": "Iskandar Muda", "url_2": "iskandar_muda" },
+    { "latitude": -7.837475, "longitude": 112.009100, "wilayah": "Kota Kediri", "kode": "10", "nama": "Jetis", "url_2": "jetis" },
+    { "latitude": -7.828975, "longitude": 112.017275, "wilayah": "Kota Kediri", "kode": "11", "nama": "Baruna", "url_2": "baruna" },
+    { "latitude": -7.830800, "longitude": 112.031175, "wilayah": "Kota Kediri", "kode": "12", "nama": "Tosaren", "url_2": "tosaren" },
+    { "latitude": -7.818300, "longitude": 112.029300, "wilayah": "Kota Kediri", "kode": "13", "nama": "Water Torrent", "url_2": "water_torn" },
+    { "latitude": -7.813575, "longitude": 112.031000, "wilayah": "Kota Kediri", "kode": "15", "nama": "A Yani Arah Utara", "url_2": "a_yani_utara" },
+    { "latitude": -7.812550, "longitude": 112.020550, "wilayah": "Kota Kediri", "kode": "16", "nama": "Dandangan", "url_2": "dandangan" },
+    { "latitude": -7.811650, "longitude": 112.015050, "wilayah": "Kota Kediri", "kode": "17", "nama": "Nabatiyasa", "url_2": "nabatiasa" }
+  ]
+}
