@@ -163,6 +163,7 @@
         "Data/Indonesia/Jawa Timur/Malang/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Malang/Kota.geojson",
         "Data/Indonesia/Jawa Timur/Mojokerto/Kabupaten.geojson",
+        "Data/Indonesia/Jawa Timur/Mojokerto/Kota.geojson",
         "Data/Indonesia/Jawa Timur/Pasuruan/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Pasuruan/Kota.geojson"
       ];
@@ -216,7 +217,10 @@
       }
 
       function Cek_Tipe_Video_CCTV(url) {
-        if (url.includes("testing-apicctv.gresikkab.go.id")) {
+        if (
+          url.includes("simanjakerto.cvmalala.com") ||
+          url.includes("testing-apicctv.gresikkab.go.id")
+        ) {
           return "embed";
         } else if (url.includes(".m3u8")) {
           return "m3u8";

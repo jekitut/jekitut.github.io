@@ -1,7 +1,9 @@
 {
-  "url_1": "https://testing-apicctv.gresikkab.go.id/uploads/hls/",
+  "url_1": "http://simanjakerto.cvmalala.com:8787/streaming/",
   "url_3": ".m3u8",
   "data": [
-    { "latitude": 0, "longitude": 0, "wilayah": "Kabupaten Mojokerto", "kode": "", "nama": "Tes", "url_2": "nb7pzbmeznir1u9erko6ea88" }
+    { "latitude": -7.464100, "longitude": 112.431900, "wilayah": "Kota Mojokerto", "kode": "59 - ALUN-ALUN UTARA", "nama": "Alun-alun Utara", "url_2": "ALUN-ALUN-UTARA" },
+    { "latitude": -7.464150, "longitude": 112.431950, "wilayah": "Kota Mojokerto", "kode": "60 - ALUN-ALUN SELATAN", "nama": "Alun-alun Selatan", "url_2": "ALUN-ALUN-SELATAN" },
+    { "latitude": -7.464100, "longitude": 112.431950, "wilayah": "Kota Mojokerto", "kode": "61 - ALUN-ALUN PTZ", "nama": "Alun-alun PTZ", "url_2": "ALUN-ALUN-PTZ" }
   ]
 }
