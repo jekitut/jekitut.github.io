@@ -134,8 +134,8 @@
     <script>
       const Data_CCTV = [
         "Data/Indonesia/Artificial Intelligence.json",
-        "Data/Indonesia/Jalan Tol - cdn.json",
-        // "Data/Indonesia/Jalan Tol - hls.json",
+        // "Data/Indonesia/Jalan Tol - cdn.json",
+        "Data/Indonesia/Jalan Tol - hls.json",
         "Data/Indonesia/Pengadilan Agama.json",
         "Data/Indonesia/PT BAJA TITIAN UTAMA.json",
         "Data/Indonesia/Jawa Timur/Batu/Kota.json",
@@ -326,6 +326,8 @@
             ].filter(Boolean).map(x => x.trim()).join('');
 
             if (!item.url || item.url === "") return;
+            item.latitude = parseFloat(item.latitude);
+            item.longitude = parseFloat(item.longitude);
             Ambil_Semua_Data_CCTV.push(item);
           });
         });
