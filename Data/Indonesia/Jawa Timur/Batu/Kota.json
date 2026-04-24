@@ -40,15 +40,15 @@
     { "latitude": "0", "longitude": "0", "wilayah": "Kota Batu", "kode": "147 - (Dishub) Klemuk", "nama": "Klemuk", "url_2": "n16VrQ6yzh0vJ5a31735272111917" },
     { "latitude": "-7.868475", "longitude": "112.564200", "wilayah": "Kota Batu", "kode": "148 - (Dishub) Jurang Susuh 2", "nama": "Jurang Susuh 2", "url_2": "X41pPwgZZnIV7Fky1735279184668" },
     { "latitude": "-7.864425", "longitude": "112.547600", "wilayah": "Kota Batu", "kode": "149 - (Dishub) Kali Lanang 2", "nama": "Kali Lanang 2", "url_2": "gp24om38gnE0vHWs1735280200520" },
-    { "latitude": "-7.870650", "longitude": "112.527525", "wilayah": "Kota Batu", "kode": "150 - (Kominfo) Pos Polisi Alun-Alun", "nama": "Pos Polisi Alun-alun", "url_2": "nnDfkaQzZR3V7ZY11742793951111" },
+    { "latitude": "-7.870650", "longitude": "112.527525", "wilayah": "Kota Batu", "kode": "150 - (Kominfo) Pos Polisi Alun-Alun", "nama": "Pos Polisi Alun-alun 2", "url_2": "nnDfkaQzZR3V7ZY11742793951111" },
 
+    { "latitude": "-7.870625", "longitude": "112.527475", "wilayah": "Kota Batu", "kode": "CCTV Dishub Perempatan Arhanud 1 – Kota Batu", "nama": "Pos Polisi Alun-alun 1", "url_2": "r35pqkErs7KRCyhX1705636530009" },
     { "latitude": "-7.862075", "longitude": "112.496450", "wilayah": "Kota Batu", "kode": "CCTV Dishub Pos Polisi Pendem 1 Kota Batu", "nama": "Rajek Wesi 1", "url_2": "wOCPjH5g75BuXfR21705741624673" },
     { "latitude": "-7.862100", "longitude": "112.496550", "wilayah": "Kota Batu", "kode": "CCTV Dishub Pos Polisi 1 Alun alun Batu", "nama": "Rajek Wesi 2", "url_2": "gB1wuwYv6T5S3yoU1705741644304" },
 
     { "latitude": "-7.866575", "longitude": "112.514250", "wilayah": "Kota Batu", "kode": "CCTV Kominfo Balai Among Tani Pintu Keluar", "nama": "Pintu Keluar Balai Kota Among Tani", "url_2": "GJV40fB3XmZvuDSZ1705636146514" },
     { "latitude": "-7.905125", "longitude": "112.573375", "wilayah": "Kota Batu", "kode": "CCTV Dishub Pos Polisi Pendem 2 Kota Batu", "nama": "Pendem 2", "url_2": "dEbJx1KQsoQEZ2ms1705750168454" },
     { "latitude": "-7.882445", "longitude": "112.533550", "wilayah": "Kota Batu", "kode": "CCTV Dishub Depan Pasar Induk Among Tani Kota Batu", "nama": "Depan Pasar Induk Among Tani", "url_2": "Ma9A5BZjf1eMJde61705741594487" },
-    { "latitude": "-7.902000", "longitude": "112.581450", "wilayah": "Kota Batu", "kode": "CCTV Dishub Perempatan Arhanud 1 – Kota Batu", "nama": "Pusdik Arhanud Arah Timur", "url_2": "r35pqkErs7KRCyhX1705636530009" },
     { "latitude": "-7.866475", "longitude": "112.512875", "wilayah": "Kota Batu", "kode": "CCTV Pintu Masuk Balai Kota Among Tani Kota Batu", "nama": "Pintu Masuk Balai Kota Among Tani", "url_2": "IKUU2Yp597KtINle1705636058212" },
     { "latitude": "-7.871150", "longitude": "112.526375", "wilayah": "Kota Batu", "kode": "CCTV Alun-Alun Sisi Barat Kota Batu", "nama": "Alun-alun Sisi Barat", "url_2": "Nun07TbGCmzdFWcO1705636022700" },
     { "latitude": "-7.871150", "longitude": "112.526925", "wilayah": "Kota Batu", "kode": "CCTV Alun-Alun Sisi Tengah Kota Batu", "nama": "Alun-alun Sisi Tengah", "url_2": "EiSJaogqiTYQ8ONQ1705576581602" }
