@@ -1,0 +1,25 @@
+{
+  "url_1": "https://cctv.bondowosokab.go.id/cgi-bin/nph-zms?scale=100&mode=jpeg&maxfps=30&monitor=",
+  "url_3": "&user=view&pass=K0minfo",
+  "data": [
+    { "latitude": -7.912525, "longitude": 113.824075, "wilayah": "Kabupaten Bondowoso", "kode": "3", "nama": "Pendopo", "url_2": "3" },
+    { "latitude": -7.911750, "longitude": 113.821900, "wilayah": "Kabupaten Bondowoso", "kode": "4", "nama": "Bank Jatim", "url_2": "4" },
+    { "latitude": -7.913575, "longitude": 113.821200, "wilayah": "Kabupaten Bondowoso", "kode": "5", "nama": "SD Negeri Kota Kulon 01", "url_2": "5" },
+    { "latitude": -7.913700, "longitude": 113.843075, "wilayah": "Kabupaten Bondowoso", "kode": "6", "nama": "Bataan PTZ", "url_2": "6" },
+    { "latitude": -7.921250, "longitude": 113.827410, "wilayah": "Kabupaten Bondowoso", "kode": "7", "nama": "SPBU Tamansari PTZ", "url_2": "7" },
+    { "latitude": -7.931150, "longitude": 113.824600, "wilayah": "Kabupaten Bondowoso", "kode": "8", "nama": "Koncer Jl. Santawi", "url_2": "8" },
+    { "latitude": -7.930150, "longitude": 113.814850, "wilayah": "Kabupaten Bondowoso", "kode": "9", "nama": "Monumen Adipura Bondowoso", "url_2": "9" },
+    { "latitude": -7.914375, "longitude": 113.823300, "wilayah": "Kabupaten Bondowoso", "kode": "10", "nama": "Kantor Pos Bondowoso", "url_2": "10" },
+    { "latitude": -7.909750, "longitude": 113.817500, "wilayah": "Kabupaten Bondowoso", "kode": "11", "nama": "SD Petra", "url_2": "11" },
+    { "latitude": -7.921300, "longitude": 113.827400, "wilayah": "Kabupaten Bondowoso", "kode": "13", "nama": "SPBU Tamansari Arah Selatan dan Timur", "url_2": "13" },
+    { "latitude": -7.921850, "longitude": 113.817900, "wilayah": "Kabupaten Bondowoso", "kode": "14", "nama": "UPT PSDA PTZ", "url_2": "14" },
+    { "latitude": -7.921750, "longitude": 113.817800, "wilayah": "Kabupaten Bondowoso", "kode": "15", "nama": "UPT PSDA Arah Selatan", "url_2": "15" },
+    { "latitude": -7.924875, "longitude": 113.826500, "wilayah": "Kabupaten Bondowoso", "kode": "16", "nama": "Ganesha Operation Bondowoso", "url_2": "16" },
+    { "latitude": -7.918250, "longitude": 113.815750, "wilayah": "Kabupaten Bondowoso", "kode": "18", "nama": "RSUD dr. H. Koesnadi Bondowoso", "url_2": "18" },
+    { "latitude": -7.916700, "longitude": 113.819700, "wilayah": "Kabupaten Bondowoso", "kode": "19", "nama": "Hotel Palm", "url_2": "19" },
+    { "latitude": -7.914000, "longitude": 113.838375, "wilayah": "Kabupaten Bondowoso", "kode": "20", "nama": "Yima Arah Barat dan Selatan", "url_2": "20" },
+    { "latitude": -7.914000, "longitude": 113.838425, "wilayah": "Kabupaten Bondowoso", "kode": "21", "nama": "Yima Arah Selatan dan Timur", "url_2": "21" },
+    { "latitude": -7.912900, "longitude": 113.827625, "wilayah": "Kabupaten Bondowoso", "kode": "22", "nama": "Pasar Induk Bondowoso", "url_2": "22" },
+    { "latitude": -7.913710, "longitude": 113.843025, "wilayah": "Kabupaten Bondowoso", "kode": "23", "nama": "Bataan Arah Barat dan Selatan", "url_2": "23" }
+  ]
+}

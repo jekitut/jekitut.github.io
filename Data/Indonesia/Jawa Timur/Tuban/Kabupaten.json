@@ -1,0 +1,23 @@
+{
+  "url_1": "https://stream.etuban.my.id/cam",
+  "url_3": "/index.m3u8",
+  "data": [
+    { "latitude": "-7.027900", "longitude": "112.097980", "wilayah": "Kabupaten Tuban", "kode": "1 - PERTIGAAN PLUMPANG SELATAN", "nama": "Plumpang Arah Selatan", "url_2": "1" },
+    { "latitude": "-7.027825", "longitude": "112.098010", "wilayah": "Kabupaten Tuban", "kode": "2 - PERTIGAAN PLUMPANG UTARA", "nama": "Plumpang Arah Utara", "url_2": "2" },
+    { "latitude": "-6.968510", "longitude": "111.774325", "wilayah": "Kabupaten Tuban", "kode": "3 - RTH SINGGAHAN TIMUR", "nama": "RTH Singgahan Arah Timur", "url_2": "3" },
+    { "latitude": "-6.968510", "longitude": "111.774275", "wilayah": "Kabupaten Tuban", "kode": "4 - RTH SINGGAHAN BARAT", "nama": "RTH Singgahan Arah Barat", "url_2": "4" },
+    { "latitude": "-6.904200", "longitude": "112.061775", "wilayah": "Kabupaten Tuban", "kode": "5 - PARKIRAN KEBONSARI", "nama": "Parkiran Bus Sunan Bonang", "url_2": "5" },
+    { "latitude": "-6.882525", "longitude": "112.046565", "wilayah": "Kabupaten Tuban", "kode": "6 - ABIRAMA UTARA", "nama": "Abirama Arah Utara", "url_2": "6" },
+    { "latitude": "-6.882575", "longitude": "112.046535", "wilayah": "Kabupaten Tuban", "kode": "7 - PERTIGAAN ABIRAMA", "nama": "Abirama Arah Selatan", "url_2": "7" },
+    { "latitude": "-6.910870", "longitude": "112.077500", "wilayah": "Kabupaten Tuban", "kode": "8 - SIMPANG ABIPRAYA", "nama": "Tugu Adipura Tuban", "url_2": "8" },
+    { "latitude": "-7.087350", "longitude": "111.970000", "wilayah": "Kabupaten Tuban", "kode": "9 - CAM1-KEBONGAGUNG-RENGEL", "nama": "Kebonagung Arah Timur", "url_2": "9" },
+    { "latitude": "-7.035135", "longitude": "112.064525", "wilayah": "Kabupaten Tuban", "kode": "10 - CAM1-DESA-KESAMBEN", "nama": "Kesamben Arah Barat", "url_2": "10" },
+    { "latitude": "-7.035125", "longitude": "112.064625", "wilayah": "Kabupaten Tuban", "kode": "11 - CAM2-DESA-KESAMBEN", "nama": "Kesamben Arah Timur", "url_2": "11" },
+    { "latitude": "-6.899275", "longitude": "111.885065", "wilayah": "Kabupaten Tuban", "kode": "12 - CAM1-DESA-JAROREJO-KEREK", "nama": "Jarorejo Arah Selatan", "url_2": "12" },
+    { "latitude": "-6.899225", "longitude": "111.885070", "wilayah": "Kabupaten Tuban", "kode": "13 - CAM2-DESA-JAROREJO-KEREK", "nama": "Jarorejo Arah Utara", "url_2": "13" },
+    { "latitude": "-6.900730", "longitude": "112.066100", "wilayah": "Kabupaten Tuban", "kode": "14 - CAM1-PERTIGAAN BANK JATIM", "nama": "Pertigaan Rahayu Arah Barat dan Selatan", "url_2": "14" },
+    { "latitude": "-6.900760", "longitude": "112.066200", "wilayah": "Kabupaten Tuban", "kode": "15 - CAM2-PERTIGAAN BANK JATIM", "nama": "Pertigaan Rahayu Arah Selatan dan Timur", "url_2": "15" },
+    { "latitude": "-6.900380", "longitude": "112.151325", "wilayah": "Kabupaten Tuban", "kode": "16 - CAM1-GLODOG-PALANG", "nama": "Glodog Arah Barat", "url_2": "16" },
+    { "latitude": "-6.900370", "longitude": "112.151375", "wilayah": "Kabupaten Tuban", "kode": "17 - CAM2-GLODOG-PALANG", "nama": "Glodog Arah Timur", "url_2": "17" }
+  ]
+}
