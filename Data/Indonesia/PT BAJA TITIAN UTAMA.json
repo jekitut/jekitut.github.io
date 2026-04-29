@@ -3,6 +3,8 @@
   "url_3": "/index.m3u8",
   "data": [
     { "latitude": "-7.827350", "longitude": "112.008075", "wilayah": "Kota Kediri", "kode": "Bandarngalim - Jembatan Bandarngalim - Kediri", "nama": "Jembatan Bandar Ngalim", "url_2": "16" },
-    { "latitude": "-7.163950", "longitude": "111.867650", "wilayah": "Kabupaten Bojonegoro", "kode": "Jetak - Jembatan Jetak - Bojonegoro", "nama": "Jembatan Jetak", "url_2": "25" }
+    { "latitude": "-8.016725", "longitude": "111.925275", "wilayah": "Kabupaten Tulungagung", "kode": "Ngunjang - Jembatan Ngunjang - Tulungagung", "nama": "Jembatan Ngunjang", "url_2": "17" },
+    { "latitude": "-7.163950", "longitude": "111.867650", "wilayah": "Kabupaten Bojonegoro", "kode": "Jetak - Jembatan Jetak - Bojonegoro", "nama": "Jembatan Jetak", "url_2": "25" },
+    { "latitude": "-8.095050", "longitude": "111.745360", "wilayah": "Kabupaten Trenggalek", "kode": "Munjungan - Jembatan Munjungan - Trenggalek", "nama": "Jembatan Munjungan", "url_2": "39" }
   ]
 }
