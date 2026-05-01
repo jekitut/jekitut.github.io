@@ -168,6 +168,7 @@
         "Data/Indonesia/Jawa Timur/Pacitan/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Pasuruan/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Pasuruan/Kota.geojson",
+        "Data/Indonesia/Jawa Timur/Probolinggo/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Situbondo/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Trenggalek/Kabupaten.geojson",
         "Data/Indonesia/Jawa Timur/Tuban/Kabupaten.geojson",
@@ -224,8 +225,7 @@
 
       function Cek_Tipe_Video_CCTV(url) {
         if (
-          url.includes("simanjakerto.cvmalala.com") ||
-          url.includes("testing-apicctv.gresikkab.go.id")
+          url.includes("simanjakerto.cvmalala.com")
         ) {
           return "embed";
         } else if (url.includes(".m3u8")) {
