@@ -173,6 +173,45 @@
     { "latitude": "-0.000000", "longitude": "000.000000", "wilayah": "Kabupaten Malang", "kode": "2167-23-436", "nama": "Arteri Singosari", "url_2": "" },
 
     { "latitude": "-7.656190", "longitude": "112.858820", "wilayah": "Kabupaten Pasuruan", "kode": "13870-21-462", "nama": "KM 793+300", "url_2": "" },
-    { "latitude": "-7.607080", "longitude": "112.752335", "wilayah": "Kabupaten Pasuruan", "kode": "13871-21-463", "nama": "KM 780+200", "url_2": "" }
+    { "latitude": "-7.607080", "longitude": "112.752335", "wilayah": "Kabupaten Pasuruan", "kode": "13871-21-463", "nama": "KM 780+200", "url_2": "" },
+
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14126-43-3388", "nama": "JPB ENTRANCE KRAKSAAN", "url_2": "DRXdMMpoSbawu8hT2721431605968853" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14127-43-3388", "nama": "JPB EXIT KRAKSAAN", "url_2": "8X6KbNEHMmOX1xRC2721479658751684" },
+
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14371-43-3388", "nama": "JPB IC KRAKSAAN", "url_2": "ac662eac-bc10-4801-b679-e0a232b97f08" },
+
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14373-43-3388", "nama": "JPB ENTRANCE PAITON", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14374-43-3388", "nama": "JPB EXIT PAITON", "url_2": "" },
+
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14551-43-3388", "nama": "JPB KM 850+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14552-43-3388", "nama": "JPB KM 850+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14553-43-3388", "nama": "JPB KM 851+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14554-43-3388", "nama": "JPB KM 851+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14555-43-3388", "nama": "JPB KM 852+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14556-43-3388", "nama": "JPB KM 852+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14557-43-3388", "nama": "JPB KM 853+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14558-43-3388", "nama": "JPB KM 853+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14559-43-3388", "nama": "JPB KM 854+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14560-43-3388", "nama": "JPB KM 854+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14561-43-3388", "nama": "JPB KM 855+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14562-43-3388", "nama": "JPB KM 855+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14563-43-3388", "nama": "JPB KM 856+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14564-43-3388", "nama": "JPB KM 856+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14565-43-3388", "nama": "JPB KM 857+600", "url_2": "" },
+
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14567-43-3388", "nama": "JPB KM 858+100", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14568-43-3388", "nama": "JPB KM 858+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14569-43-3388", "nama": "JPB KM 859+100", "url_2": "" },
+
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14572-43-3388", "nama": "JPB KM 860+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14573-43-3388", "nama": "JPB ENTRANCE KRAKSAAN", "url_2": "DRXdMMpoSbawu8hT2721431605968853" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14574-43-3388", "nama": "JPB AKSES KRAKSAAN KM 1+500", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14575-43-3388", "nama": "JPB AKSES KRAKSAAN KM 1+000", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14576-43-3388", "nama": "JPB AKSES KRAKSAAN KM 0+500", "url_2": "" },
+    { "latitude": "-7.762740", "longitude": "113.396460", "wilayah": "Kabupaten Probolinggo", "kode": "14577-43-3388", "nama": "Akses Kraksaan", "url_2": "aPrzZiKge4oEu23u1734860355909" },
+
+    { "latitude": "-7.720575", "longitude": "113.501025", "wilayah": "Kabupaten Probolinggo", "kode": "14606-43-3388", "nama": "Akses Paiton", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14607-43-3388", "nama": "JPB AKSES PAITON 0+600", "url_2": "" },
+    { "latitude": "0", "longitude": "0", "wilayah": "Kabupaten Probolinggo", "kode": "14608-43-3388", "nama": "JPB AKSES PAITON 001+100", "url_2": "" }
   ]
 }
